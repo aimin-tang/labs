@@ -1,27 +1,44 @@
 <html ng-app>
 <head>
+  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="controller.css">
   <script type='text/javascript' src="angular.min.js"></script>
-  <script type='text/javascript' src="jquery.js"></script>
+  <script type='text/javascript' src="jquery.min.js"></script>
   <script type='text/javascript' src="bootstrap.min.js"></script>
 </head>
-<body style="padding: 50px"
-      ng-init="booksRead = [ 
-               { name: 'Core Java', date: '2017-09-05' },
-               { name: 'Javascript In 24 Hours', date: '2017-11-13', description: 'javascript and DOM'},
-               { name: 'Eloquent Javascript', date: '2017-11-01', description: 'functional programming'},
-               { name: 'Working With Algorithms In Python', date: '2017-11-20', description: 'brute force\\nshortest path first'} ]">
 
-<p>Filter list: <input ng-model="searchFor" size="30"/></p>
+<body ng-controller="AlbumListController">
 
-<div style="width: 300px; float: left; margin-right: 20px" ng-repeat="book in booksRead | filter:searchFor" class="panel panel-default">
-  <div class="panel-heading"> {{ book.name }} ({{ book.date }})</div>
-  <div class="panel-body">
-    {{ book.description }}
+  <p>
+    <input type="text" placeholder="Search..." ng-model="searchFor" size="20"/>
+  </p>
+
+  <div class="book panel panel-primary" ng-repeat="book in booksRead | filter: { title: searchFor } ">
+    <div class="panel-heading"> {{ book.title }} <div class="title" >{{ book.date }}</div> </div>
+    <div class="panel-body">
+      {{ book.description }}
+    </div>
   </div>
-</div>
 
-<div style="clear: left"></div>
+
+
+<script type="text/javascript">
+
+function AlbumListController ($scope) {
+
+    $scope.booksRead = [ 
+        { title: 'Core Java', date: '2017-09-05' },
+        { title: 'Javascript In 24 Hours', date: '2017-11-13', description: 'javascript and DOM'},
+        { title: 'Eloquent Javascript', date: '2017-11-01', description: 'functional programming'},
+        { title: 'Working With Algorithms In Python', date: '2017-11-20', description: 'brute force\\nshortest path first'}
+    ];
+
+}
+
+</script>
+
 </body>
 </html>
+
+
+
