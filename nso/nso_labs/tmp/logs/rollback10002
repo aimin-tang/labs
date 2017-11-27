@@ -1,0 +1,12 @@
+# Created by: system
+# Date: 2017-11-10 14:04:47
+# Via: system
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10002
+
+kicker:kickers {
+    delete:
+    kicker:data-kicker ncs-internal-side-effects;
+}

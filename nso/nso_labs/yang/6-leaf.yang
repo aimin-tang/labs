@@ -1,0 +1,23 @@
+leaf host-name {
+  type string;
+  mandatory true;
+  config true;
+  description "Hostname";
+}
+leaf cpu-temp {
+  type int32;
+  units degrees-celsius;
+  config false;
+  description "Temp";
+}
+leaf attributes:
+config
+default
+mandatory
+must
+type
+when
+description
+reference
+units
+status

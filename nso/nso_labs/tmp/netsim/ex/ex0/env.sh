@@ -1,0 +1,13 @@
+export CONFD_IPC_PORT=5010
+export NETCONF_SSH_PORT=12022
+export NETCONF_TCP_PORT=13022
+export CLI_SSH_PORT=10022
+export SNMP_PORT=11022
+export NAME=ex0
+export COUNTER=0
+export TWO_DIGIT_COUNTER=00
+export CONFD=${NCS_DIR}/netsim/confd/bin/confd
+export CONFDC=${NCS_DIR}/netsim/confd/bin/confdc
+export CONFD_DIR=${NCS_DIR}/netsim/confd
+export PATH=${NCS_DIR}/netsim/confd/bin:/Users/aitang/nso-4.5/bin:/Library/Frameworks/Python.framework/Versions/3.6/bin:/Library/Frameworks/Python.framework/Versions/3.4/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/bin/jamf:/Users/aitang/cdets/bin
+export PACKAGE_NETSIM_DIR=../../../packages/router/netsim

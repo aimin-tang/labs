@@ -1,0 +1,40 @@
+container rip {
+  list network-ifname {
+    key ifname;
+    leaf ifname {
+      type leafref {
+        path "/interface/name";
+    }
+  }
+}
+
+container video {
+  leaf v-ip {
+    type leafref {
+      path "/client/ip";
+    }
+  }
+  leaf v-port {
+    type leafref {
+      path "/client[ip=current()/../v-ip]/port";
+  }
+}
+
+deref:
+container video-deref {
+  leaf v-ip {
+    type leafref {
+      path "/client/ip";
+    }
+  }
+  leaf v-port {
+    type leafref {
+      path "deref(../v-ip)/../port";
+    }
+  }
+  leaf v-stream {
+    type leafref {
+      path "deref(../v-port)/../stream";
+    }
+  }
+}

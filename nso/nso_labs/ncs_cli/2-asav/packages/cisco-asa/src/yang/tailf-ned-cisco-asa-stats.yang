@@ -1,0 +1,208 @@
+// =========================================================================
+//                          CISCO-ASA STATS & EXEC
+// =========================================================================
+
+module tailf-ned-cisco-asa-stats {
+  namespace "http://cisco.com/ned/asa-stats";
+  prefix asa-stats;
+
+  import tailf-common {
+    prefix tailf;
+  }
+
+
+  /// ========================================================================
+  /// vpn-sessiondb
+  /// ========================================================================
+
+  container vpn-sessiondb {
+    config false;
+
+    list anyconnect {
+      key "username index";
+      leaf username {
+        type string;
+      }
+      leaf index {
+        type uint32;
+      }
+
+      leaf login-time {
+        type string;
+      }
+      leaf duration {
+        type string;
+      }
+      leaf inactivity {
+        type string;
+      }
+      leaf tx-bytes {
+        type uint64;
+      }
+      leaf rx-bytes {
+        type uint64;
+      }
+      leaf status {
+        type enumeration {
+          enum active;
+          enum inactive;
+        }
+      }
+    }
+  }
+
+
+  /// ========================================================================
+  /// inside-interface
+  /// ========================================================================
+  // DEMO CODE: hard coded interface name 'inside'
+
+  container inside-interface {
+    leaf line-protocol-status {
+      type enumeration {
+        enum "up";
+        enum "down";
+      }
+      default "down";
+    }
+
+    leaf input-bytes {
+      type uint64;
+    }
+
+    leaf output-bytes {
+      type uint64;
+    }
+
+    leaf input-rate {
+      type uint32;
+    }
+
+    leaf output-rate {
+      type uint32;
+    }
+  }
+
+
+  /// ========================================================================
+  /// ssl
+  /// ========================================================================
+
+  container ssl {
+    leaf post-decrypt-octets {
+      type uint64;
+    }
+    leaf post-encrypt-octets {
+      type uint64;
+    }
+  }
+
+
+  /// ========================================================================
+  /// exec
+  /// ========================================================================
+
+  container exec {
+    tailf:info "Execute commands on device";
+
+    // show [arg 1] .. [arg N]
+    tailf:action show {
+      tailf:info "Execute show commands";
+      tailf:actionpoint ncsinternal {
+        tailf:internal;
+      }
+      input {
+        leaf-list args {
+          tailf:cli-drop-node-name;
+          tailf:cli-flat-list-syntax;
+          type string {
+            tailf:info "show argument(s)";
+          }
+        }
+      }
+      output {
+        leaf result {
+          type string;
+        }
+      }
+    }
+
+    // clear [arg 1] .. [arg N]
+    tailf:action clear {
+      tailf:info "Reset functions";
+      tailf:actionpoint ncsinternal {
+        tailf:internal;
+      }
+      input {
+        leaf-list args {
+          tailf:cli-drop-node-name;
+          tailf:cli-flat-list-syntax;
+          type string {
+            tailf:info "clear argument(s)";
+          }
+        }
+      }
+      output {
+        leaf result {
+          type string;
+        }
+      }
+    }
+
+    // license [arg 1] .. [arg N]
+    tailf:action license {
+      tailf:info "Register/deregister the product instance with the "+
+        "Cisco Licensing Authority";
+      tailf:actionpoint ncsinternal {
+        tailf:internal;
+      }
+      input {
+        leaf-list args {
+          tailf:cli-drop-node-name;
+          tailf:cli-flat-list-syntax;
+          type string {
+            tailf:info "USAGE:;;license smart deregister|register|renew [options]";
+          }
+        }
+      }
+      output {
+        leaf result {
+          type string;
+        }
+      }
+    }
+
+    // any [contex <context name>] [arg 1] .. [arg N]
+    tailf:action any {
+      tailf:info "Execute any command on device";
+      tailf:actionpoint ncsinternal {
+        tailf:internal;
+      }
+      input {
+        leaf context {
+          tailf:info "Specify context to run the command in";
+          type string {
+            tailf:info "WORD;;Context name";
+          }
+        }
+        leaf-list args {
+          tailf:cli-drop-node-name;
+          tailf:cli-flat-list-syntax;
+          type string {
+            tailf:info "WORD;;any [context <context>] \"<cmd> [option(s)]\", e.g: any \"show ppp summary\"";
+          }
+        }
+      }
+      output {
+        leaf result {
+          type string;
+        }
+      }
+    }
+  }
+}
+
+
+/// ========================================================================
+//                          EOF
+/// ========================================================================

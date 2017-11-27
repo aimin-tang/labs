@@ -1,0 +1,21 @@
+<INFO> 10-Nov-2017::14:17:07.470 AITANG-M-33SQ confd[28649]: audit user: admin/0 login failed via netconf from 127.0.0.1:59667 with ssh: Couldn't read "/var/confd/homes/admin/.ssh/authorized_keys2": "no such file or directory"
+<INFO> 10-Nov-2017::14:17:08.716 AITANG-M-33SQ confd[28649]: audit user: admin/0 local authentication succeeded via netconf from 127.0.0.1:59667 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::14:17:08.716 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged in via netconf from 127.0.0.1:59667 with ssh using local authentication
+<INFO> 10-Nov-2017::14:17:08.721 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged out <local> user
+<INFO> 10-Nov-2017::14:23:55.596 AITANG-M-33SQ confd[28649]: audit user: admin/0 local authentication succeeded via netconf from 127.0.0.1:60148 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::14:23:55.596 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged in via netconf from 127.0.0.1:60148 with ssh using local authentication
+<INFO> 10-Nov-2017::14:23:55.601 AITANG-M-33SQ confd[28649]: audit user: admin/28 assigned to groups: admin
+<INFO> 10-Nov-2017::14:26:33.055 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged out <local> user
+<INFO> 10-Nov-2017::14:32:19.673 AITANG-M-33SQ confd[28649]: audit user: admin/0 local authentication succeeded via netconf from 127.0.0.1:60626 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::14:32:19.673 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged in via netconf from 127.0.0.1:60626 with ssh using local authentication
+<INFO> 10-Nov-2017::14:32:19.675 AITANG-M-33SQ confd[28649]: audit user: admin/29 assigned to groups: admin
+<INFO> 10-Nov-2017::14:34:50.544 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged out <local> user
+<INFO> 10-Nov-2017::14:35:28.914 AITANG-M-33SQ confd[28649]: audit user: admin/0 local authentication succeeded via netconf from 127.0.0.1:60808 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::14:35:28.914 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged in via netconf from 127.0.0.1:60808 with ssh using local authentication
+<INFO> 10-Nov-2017::14:35:28.915 AITANG-M-33SQ confd[28649]: audit user: admin/30 assigned to groups: admin
+<INFO> 10-Nov-2017::14:38:00.049 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged out <local> user
+<INFO> 10-Nov-2017::15:32:29.195 AITANG-M-33SQ confd[28649]: audit user: admin/0 local authentication succeeded via netconf from 127.0.0.1:64623 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::15:32:29.195 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged in via netconf from 127.0.0.1:64623 with ssh using local authentication
+<INFO> 10-Nov-2017::15:32:29.196 AITANG-M-33SQ confd[28649]: audit user: admin/31 assigned to groups: admin
+<INFO> 10-Nov-2017::15:33:06.927 AITANG-M-33SQ confd[28649]: audit user: admin/32 assigned to groups: admin
+<INFO> 10-Nov-2017::15:35:37.291 AITANG-M-33SQ confd[28649]: audit user: admin/0 logged out <local> user

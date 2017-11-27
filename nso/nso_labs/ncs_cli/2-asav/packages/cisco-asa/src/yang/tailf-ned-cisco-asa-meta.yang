@@ -1,0 +1,219 @@
+module tailf-ned-cisco-asa-meta {
+  namespace "http://cisco.com/ned/asa-meta";
+  prefix asa-meta;
+
+  import tailf-common {
+    prefix tailf;
+  }
+
+  import tailf-ncs {
+    prefix ncs;
+  }
+  import ietf-inet-types {
+    prefix inet;
+  }
+
+
+  /// =========================================================================
+  /// GROUPING
+  /// =========================================================================
+
+  grouping cisco-asa-ned-settings-grouping {
+
+    container cisco-asa {
+      tailf:info "cisco-asa ned-settings";
+
+      // cisco-asa admin-device
+      container admin-device {
+        tailf:info "admin SSH connection to single context multiple mode device";
+
+        // cisco-asa admin-device name
+        leaf name {
+          tailf:info "Host name for the admin context on which the context resides";
+          type leafref {
+            path "/ncs:devices/ncs:device/ncs:name";
+          }
+        }
+
+        // cisco-asa admin-device method
+        leaf method {
+          tailf:info "Method to use to pull user-context config from the admin-device";
+          type enumeration {
+            enum "maapi" {
+              tailf:info "Use MAAPI to pull the config from the admin-device";
+            }
+            enum "ssh" {
+              tailf:info "Use a direct SSH connection to the admin-device to pull the config (default)";
+            }
+          }
+        }
+
+        // cisco-asa admin-device number-of-retries
+        leaf number-of-retries {
+          tailf:info "Configure max number of extra retries the NED will try to"
+            + " connect to the admin device before giving up. Default 0";
+          type uint8 {
+            range "0..255";
+          }
+        }
+
+        // cisco-asa admin-device time-between-retry
+        leaf time-between-retry {
+          tailf:info "Configure the time in seconds the NED will wait between"
+            +" each admin connect retry. Default 1s";
+          type uint8 {
+            range "1..255";
+          }
+        }
+      }
+
+      // cisco-asa extended-parser
+      leaf extended-parser {
+        tailf:info "Make the cisco-asa NED handle CLI parsing (i.e. transform the "
+          +"running-config from the device to the model based config tree).";
+        type enumeration {
+          enum "disabled" {
+            tailf:info "Load configuration the standard way.";
+          }
+          enum "turbo-mode" {
+            tailf:info "The NED executes the whole command parsing by itself, "
+              + "completely bypassing the NSO CLI parser. The configuration "
+              + "dump is transferred to NSO in XML format.";
+          }
+        }
+      }
+
+      // cisco-asa get-device-config-settings
+      container get-device-config-settings {
+        tailf:info "Configure how the NED shall read config from the device.";
+
+        // cisco-asa get-device-config-settings use-startup-config
+        leaf use-startup-config {
+          tailf:info "Set to true if NED should always return startup config (i.e. saved config)";
+          type boolean;
+        }
+      }
+
+      // cisco-asa auto context-config-url-file-delete
+      container auto {
+        tailf:info "Configure auto (dynamic behaviour)";
+        leaf context-config-url-file-delete {
+          tailf:info "Delete config-url file when updating context / config-url (default: true)";
+          type boolean;
+        }
+      }
+    }
+
+    // cisco-asa-log-verbose
+    leaf cisco-asa-log-verbose {
+      tailf:info "Enabled extra verbose logging in NED (for debugging)";
+      type boolean;
+    }
+
+    leaf cisco-asa-write-memory-setting {
+      tailf:info "Configure how and when an applied config is saved"
+        +" to persistent memory on the device.";
+      type enumeration {
+        enum "on-commit" {
+          tailf:info "Save configuration immediately after the config"
+          +" has been successfully applied on the device. If an error"
+          +" occurs when saving the whole running config will be"
+          +" rolled back (default).";
+        }
+        enum "disabled" {
+          tailf:info "Disable saving the applied config to persistent memory.";
+        }
+      }
+    }
+
+    // cisco-asa-transaction-id-method
+    leaf cisco-asa-transaction-id-method {
+      tailf:info "Method for calculating transaction id. "+
+        "Typically used for check-sync operations";
+      type enumeration {
+        enum config-hash {
+          tailf:info "Use a MD5 checksum of running-config for transaction id (default)";
+        }
+        enum show-checksum {
+          tailf:info "Use built in 'show checksum' Cryptochecksum.";
+        }
+        enum config-hash-cached {
+          tailf:info "Same as config-hash except that transaction "+
+            "id method will reuse the last unmodified config from show (sync-from)";
+        }
+      }
+    }
+
+    // cisco-asa-context-name
+    leaf cisco-asa-context-name {
+      tailf:info "Specify context name for single context login on multiple mode device";
+      type string {
+        tailf:info "WORD;;Symbolic name of the context";
+      }
+    }
+
+    // cisco-asa-context-list *
+    list cisco-asa-context-list {
+      tailf:info "Managed contexts list";
+      tailf:cli-suppress-mode;
+      tailf:cli-delete-when-empty;
+      key name;
+      leaf name {
+        type string {
+          tailf:info "WORD;;Context name";
+        }
+      }
+    }
+
+    // cisco-asa-auto-prompts *
+    list cisco-asa-auto-prompts {
+      tailf:info "Pre-stored answers to device prompting questions.";
+      tailf:cli-suppress-mode;
+      tailf:cli-delete-when-empty;
+      tailf:cli-compact-syntax;
+      tailf:cli-incomplete-command;
+      key id;
+      leaf id {
+        type string {
+          tailf:info "WORD;;List id, any string.";
+        }
+      }
+      leaf question {
+        tailf:info "Device question, regular expression";
+        type string {
+          tailf:info "WORD;;Question, regexp format";
+        }
+      }
+      leaf answer {
+        tailf:info "Answer to device question";
+        type string {
+          tailf:info "WORD;;Answer to device question or the word 'ENTER' for LF+CR";
+        }
+      }
+    }
+  }
+
+
+  /// =========================================================================
+  /// MODEL
+  /// =========================================================================
+
+
+  /// =========================================================================
+  /// cisco-asa-transaction-id-method
+  /// =========================================================================
+
+  augment "/ncs:devices/ncs:global-settings/ncs:ned-settings" {
+    uses cisco-asa-ned-settings-grouping;
+  }
+
+  augment "/ncs:devices/ncs:profiles/ncs:profile/ncs:ned-settings" {
+    uses cisco-asa-ned-settings-grouping;
+  }
+
+  augment "/ncs:devices/ncs:device/ncs:ned-settings" {
+    when "../ncs:device-type/ncs:cli/ncs:ned-id = 'asa-id:cisco-asa'";
+    uses cisco-asa-ned-settings-grouping;
+  }
+
+}

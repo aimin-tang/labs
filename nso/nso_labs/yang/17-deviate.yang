@@ -1,0 +1,11 @@
+deviation /base:system/base:user/base:type {
+  deviate add {
+    default "admin";
+  }
+}
+
+deviation /base:system/base:name-server {
+  deviate replace {
+    max-element 3;
+  }
+}

@@ -1,0 +1,13 @@
+typedef threshold {
+  description "Threshold";
+  type union {
+    type unit16 {
+      range "0..100";
+    }
+    type enumeration {
+      enum disabled {
+        description "No threshold";
+      }
+    }
+  }
+}

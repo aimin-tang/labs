@@ -1,0 +1,13 @@
+<INFO> 10-Nov-2017::14:03:58.964 AITANG-M-33SQ confd[28671]: confd embedded apps in early_phase0:
+	[]
+<INFO> 10-Nov-2017::14:03:59.151 AITANG-M-33SQ confd[28671]: confd mmap_schema handle_info got msg: timeout
+<INFO> 10-Nov-2017::14:03:59.182 AITANG-M-33SQ confd[28671]: confd embedded apps in phase0:
+	[]
+<INFO> 10-Nov-2017::14:03:59.349 AITANG-M-33SQ confd[28671]: devel-cdb init files found in ./cdb: aaa_init.xml, sys.xml
+<INFO> 10-Nov-2017::14:03:59.450 AITANG-M-33SQ confd[28671]: devel-cdb Compacted CDB journal file: 1 ms (186 nodes in memory, disk size 2.34 KiB -> 2.30 KiB)
+<INFO> 10-Nov-2017::14:03:59.457 AITANG-M-33SQ confd[28671]: confd embedded apps in phase1:
+	[]
+<INFO> 10-Nov-2017::14:03:59.504 AITANG-M-33SQ confd[28671]: confd embedded apps in phase1_delayed:
+	[]
+<INFO> 10-Nov-2017::14:03:59.512 AITANG-M-33SQ confd[28671]: confd embedded apps in phase2:
+	[]

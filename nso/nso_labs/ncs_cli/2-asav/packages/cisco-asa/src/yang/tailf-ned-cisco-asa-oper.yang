@@ -1,0 +1,63 @@
+// =========================================================================
+//                          cisco-asa NED
+// =========================================================================
+module tailf-ned-cisco-asa-oper {
+  namespace 'http://tail-f.com/ned/cisco-asa/oper';
+  prefix asa-op;
+
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  import tailf-common {
+    prefix tailf;
+  }
+
+  import ietf-inet-types {
+    prefix inet;
+  }
+
+
+  // =========================================================================
+  // Description
+  // =========================================================================
+  // This file contains the cdb-oper part of the CISCO ASA YANG model.
+
+
+  /// ========================================================================
+  /// cisco-asa-oper
+  /// ========================================================================
+
+  augment "/ncs:devices/ncs:device/ncs:ned-settings" {
+    when "../ncs:device-type/ncs:cli/ncs:ned-id = 'asa-id:cisco-asa'";
+
+    container cisco-asa-oper {
+      tailf:info "Cisco ASA internal oper data";
+      config false;
+      tailf:cdb-oper {
+        tailf:persistent true;
+      }
+
+      // cisco-asa-oper / secrets *
+      list secrets {
+        tailf:cli-suppress-mode;
+        tailf:cli-delete-when-empty;
+        key "path";
+        leaf "path" {
+          type string;
+        }
+        leaf encrypted {
+          type string;
+        }
+        leaf cleartext {
+          tailf:hidden all;
+          type string;
+        }
+        leaf regexp {
+          tailf:hidden all;
+          type string;
+        }
+      }
+    }
+  }
+}

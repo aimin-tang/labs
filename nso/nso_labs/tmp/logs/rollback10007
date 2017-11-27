@@ -1,0 +1,46 @@
+# Created by: admin
+# Date: 2017-11-10 14:32:19
+# Via: cli
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10007
+
+ncs:devices {
+    ncs:device ex0 {
+        ncs:config {
+            r:sys {
+                r:routes {
+                    r:inet {
+                        delete:
+                        r:route 10.2.0.0 24;
+                    }
+                }
+            }
+        }
+    }
+    ncs:device ex1 {
+        ncs:config {
+            r:sys {
+                r:routes {
+                    r:inet {
+                        delete:
+                        r:route 10.2.0.0 24;
+                    }
+                }
+            }
+        }
+    }
+    ncs:device ex2 {
+        ncs:config {
+            r:sys {
+                r:routes {
+                    r:inet {
+                        delete:
+                        r:route 10.2.0.0 24;
+                    }
+                 }
+             }
+         }
+     }
+ }

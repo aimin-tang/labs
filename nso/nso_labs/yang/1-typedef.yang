@@ -1,0 +1,10 @@
+typedef percent {
+  type uint16 {
+    range "0 .. 100";
+  }
+  description "Percentage";
+}
+
+leaf completed {
+  type percent;
+}

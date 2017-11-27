@@ -1,0 +1,5 @@
+import "ietf-yang-types" {
+  prefix yang;
+}
+
+type yang:counter64;

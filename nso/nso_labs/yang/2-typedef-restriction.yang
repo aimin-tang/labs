@@ -1,0 +1,23 @@
+typedef my-base-int32-type {
+  type int32 {
+    range "1..4 | 10..20"
+  }
+}
+typedef derived-int32 {
+  type my-base-int32-type {
+    range "11..max";
+  }
+}
+
+typedef my-base-str-type {
+  type string {
+    length "1..255";
+  }
+}
+typedef derived-str {
+  type my-base-str-type {
+    length "11 | 42..max";
+    pattern "[0-9a-fA-F]*";
+  }
+}
+

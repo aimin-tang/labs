@@ -1,0 +1,1168 @@
+
+10-Nov-2017::14:04:45.962 Evaluating XPath for: /cluster/commit-queue/enabled:
+   . = 'false' or
+not (/cluster/remote-node
+       [not (username)]
+       [deref(authgroup)/../default-map[same-user or same-pass]])
+get_elem("/ncs:cluster/commit-queue/enabled") = false
+10-Nov-2017::14:04:45.981 XPath for: /cluster/commit-queue/enabled returns true
+
+10-Nov-2017::14:04:45.981 Evaluating XPath for: /cluster/device-notifications/enabled:
+   . = 'false' or
+not (/cluster/remote-node
+       [not (username)]
+       [deref(authgroup)/../default-map[same-user or same-pass]])
+get_elem("/ncs:cluster/device-notifications/enabled") = false
+10-Nov-2017::14:04:45.981 XPath for: /cluster/device-notifications/enabled returns true
+
+10-Nov-2017::14:04:45.982 Evaluating XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/security-level:
+  (. = 'auth-priv' and ../priv) or (. != 'auth-priv')
+get_elem("/ncs:devices/authgroups/snmp-group{default}/umap{admin}/usm/security-level") = auth-priv
+exists("/ncs:devices/authgroups/snmp-group{default}/umap{admin}/usm/priv") = true
+10-Nov-2017::14:04:45.982 XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/security-level returns true
+
+10-Nov-2017::14:04:45.982 Evaluating XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/security-level:
+  . = 'no-auth-no-priv' or ../auth
+get_elem("/ncs:devices/authgroups/snmp-group{default}/umap{admin}/usm/security-level") = auth-priv
+exists("/ncs:devices/authgroups/snmp-group{default}/umap{admin}/usm/auth") = true
+10-Nov-2017::14:04:45.982 XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/security-level returns true
+
+10-Nov-2017::14:04:45.983 Evaluating XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/priv:
+  ../auth
+exists("/ncs:devices/authgroups/snmp-group{default}/umap{admin}/usm/auth") = true
+10-Nov-2017::14:04:45.983 XPath for: /devices/authgroups/snmp-group[name='default']/umap[local-user='admin']/usm/priv returns true
+
+10-Nov-2017::14:04:45.983 Evaluating XPath for: /devices/device[name='ex0']:
+  remote-node or address
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+get_elem("/ncs:devices/device{ex0}/address") = 127.0.0.1
+10-Nov-2017::14:04:45.983 XPath for: /devices/device[name='ex0'] returns true
+
+10-Nov-2017::14:04:45.984 Evaluating XPath for: /devices/device[name='ex0']/authgroup:
+  /devices/authgroups/group/name
+get_elem("/ncs:devices/device{ex0}/authgroup") = default
+exists("/ncs:devices/authgroups/group{default}") = true
+get_elem("/ncs:devices/device{ex0}/authgroup") = default
+10-Nov-2017::14:04:45.984 XPath for: /devices/device[name='ex0']/authgroup returns true
+
+10-Nov-2017::14:04:45.984 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::14:04:45.985 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::14:04:45.985 Evaluating XPath for: /devices/device[name='ex0']/device-type/netconf:
+  ../../authgroup
+get_elem("/ncs:devices/device{ex0}/authgroup") = default
+10-Nov-2017::14:04:45.985 XPath for: /devices/device[name='ex0']/device-type/netconf returns true
+
+10-Nov-2017::14:04:45.985 Evaluating XPath for: /devices/device[name='ex1']:
+  remote-node or address
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+get_elem("/ncs:devices/device{ex1}/address") = 127.0.0.1
+10-Nov-2017::14:04:45.985 XPath for: /devices/device[name='ex1'] returns true
+
+10-Nov-2017::14:04:45.986 Evaluating XPath for: /devices/device[name='ex1']/authgroup:
+  /devices/authgroups/group/name
+get_elem("/ncs:devices/device{ex1}/authgroup") = default
+exists("/ncs:devices/authgroups/group{default}") = true
+get_elem("/ncs:devices/device{ex1}/authgroup") = default
+10-Nov-2017::14:04:45.986 XPath for: /devices/device[name='ex1']/authgroup returns true
+
+10-Nov-2017::14:04:45.986 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::14:04:45.986 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::14:04:45.987 Evaluating XPath for: /devices/device[name='ex1']/device-type/netconf:
+  ../../authgroup
+get_elem("/ncs:devices/device{ex1}/authgroup") = default
+10-Nov-2017::14:04:45.987 XPath for: /devices/device[name='ex1']/device-type/netconf returns true
+
+10-Nov-2017::14:04:45.987 Evaluating XPath for: /devices/device[name='ex2']:
+  remote-node or address
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+get_elem("/ncs:devices/device{ex2}/address") = 127.0.0.1
+10-Nov-2017::14:04:45.987 XPath for: /devices/device[name='ex2'] returns true
+
+10-Nov-2017::14:04:45.987 Evaluating XPath for: /devices/device[name='ex2']/authgroup:
+  /devices/authgroups/group/name
+get_elem("/ncs:devices/device{ex2}/authgroup") = default
+exists("/ncs:devices/authgroups/group{default}") = true
+get_elem("/ncs:devices/device{ex2}/authgroup") = default
+10-Nov-2017::14:04:45.988 XPath for: /devices/device[name='ex2']/authgroup returns true
+
+10-Nov-2017::14:04:45.988 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::14:04:45.988 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::14:04:45.989 Evaluating XPath for: /devices/device[name='ex2']/device-type/netconf:
+  ../../authgroup
+get_elem("/ncs:devices/device{ex2}/authgroup") = default
+10-Nov-2017::14:04:45.989 XPath for: /devices/device[name='ex2']/device-type/netconf returns true
+
+10-Nov-2017::14:04:45.999 Evaluating XPath for: /cluster/commit-queue/enabled:
+   . = 'false' or
+not (/cluster/remote-node
+       [not (username)]
+       [deref(authgroup)/../default-map[same-user or same-pass]])
+get_elem("/ncs:cluster/commit-queue/enabled") = false
+10-Nov-2017::14:04:45.999 XPath for: /cluster/commit-queue/enabled returns true
+
+10-Nov-2017::14:04:45.999 Evaluating XPath for: /cluster/device-notifications/enabled:
+   . = 'false' or
+not (/cluster/remote-node
+       [not (username)]
+       [deref(authgroup)/../default-map[same-user or same-pass]])
+get_elem("/ncs:cluster/device-notifications/enabled") = false
+10-Nov-2017::14:04:45.999 XPath for: /cluster/device-notifications/enabled returns true
+
+10-Nov-2017::14:04:46.552 Evaluating XPath for: /snmp/agent/version/v3:
+  ../../engine-id
+exists("/snmp:snmp/agent/engine-id") = true
+10-Nov-2017::14:04:46.552 XPath for: /snmp/agent/version/v3 returns true
+
+10-Nov-2017::14:04:46.553 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='no-auth-no-priv']/notify-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm no-auth-no-priv}/notify-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm no-auth-no-priv}/notify-view") = internet
+10-Nov-2017::14:04:46.554 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='no-auth-no-priv']/notify-view returns true
+
+10-Nov-2017::14:04:46.554 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='no-auth-no-priv']/read-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm no-auth-no-priv}/read-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm no-auth-no-priv}/read-view") = internet
+10-Nov-2017::14:04:46.555 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='no-auth-no-priv']/read-view returns true
+
+10-Nov-2017::14:04:46.555 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-no-priv']/notify-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-no-priv}/notify-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-no-priv}/notify-view") = internet
+10-Nov-2017::14:04:46.555 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-no-priv']/notify-view returns true
+
+10-Nov-2017::14:04:46.556 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-no-priv']/read-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-no-priv}/read-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-no-priv}/read-view") = internet
+10-Nov-2017::14:04:46.556 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-no-priv']/read-view returns true
+
+10-Nov-2017::14:04:46.556 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-priv']/notify-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-priv}/notify-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-priv}/notify-view") = internet
+10-Nov-2017::14:04:46.557 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-priv']/notify-view returns true
+
+10-Nov-2017::14:04:46.557 Evaluating XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-priv']/read-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-priv}/read-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{initial}/access{usm auth-priv}/read-view") = internet
+10-Nov-2017::14:04:46.558 XPath for: /snmp/vacm/group[name='initial']/access[sec-model='usm'][sec-level='auth-priv']/read-view returns true
+
+10-Nov-2017::14:04:46.558 Evaluating XPath for: /snmp/vacm/group[name='public']/access[sec-model='any'][sec-level='no-auth-no-priv']/notify-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{public}/access{any no-auth-no-priv}/notify-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{public}/access{any no-auth-no-priv}/notify-view") = internet
+10-Nov-2017::14:04:46.558 XPath for: /snmp/vacm/group[name='public']/access[sec-model='any'][sec-level='no-auth-no-priv']/notify-view returns true
+
+10-Nov-2017::14:04:46.559 Evaluating XPath for: /snmp/vacm/group[name='public']/access[sec-model='any'][sec-level='no-auth-no-priv']/read-view:
+  /snmp/vacm/view/name
+get_elem("/snmp:snmp/vacm/group{public}/access{any no-auth-no-priv}/read-view") = internet
+exists("/snmp:snmp/vacm/view{internet}") = true
+get_elem("/snmp:snmp/vacm/group{public}/access{any no-auth-no-priv}/read-view") = internet
+10-Nov-2017::14:04:46.559 XPath for: /snmp/vacm/group[name='public']/access[sec-model='any'][sec-level='no-auth-no-priv']/read-view returns true
+
+10-Nov-2017::14:04:46.559 Evaluating XPath for: /snmp/notify[name='foo']/type:
+  . != 'inform' or
+count(
+  /snmp/target[tag = current()/../tag]/../usm[../agent/engine-id])
+= count(
+  /snmp/target[tag = current()/../tag]/../usm)
+get_elem("/snmp:snmp/notify{foo}/type") = trap
+10-Nov-2017::14:04:46.560 XPath for: /snmp/notify[name='foo']/type returns true
+
+10-Nov-2017::14:04:46.560 Evaluating XPath for: /snmp/usm/local/user[name='initial']/priv:
+  ../auth
+exists("/snmp:snmp/usm/local/user{initial}/auth") = true
+10-Nov-2017::14:04:46.560 XPath for: /snmp/usm/local/user[name='initial']/priv returns true
+
+10-Nov-2017::14:04:46.560 Evaluating XPath for: /snmp/target[name='monitor']/v2c/sec-name:
+  /snmp/community/sec-name
+get_next(/snmp:snmp/community) = {public}
+get_elem("/snmp:snmp/community{public}/sec-name") = public
+get_elem("/snmp:snmp/target{monitor}/v2c/sec-name") = public
+10-Nov-2017::14:04:46.561 XPath for: /snmp/target[name='monitor']/v2c/sec-name returns true
+
+10-Nov-2017::14:04:52.527 maapi_xpath_eval_expr() evaluating: string(count(/devices/device))
+num_instances("/ncs:devices/device") = 3
+10-Nov-2017::14:04:52.527 maapi_xpath_eval_expr() result: 3
+
+10-Nov-2017::14:04:52.528 maapi_xpath_eval_expr() evaluating: string(count(/devices/device/remote-node))
+get_next(/ncs:devices/device) = {ex0}
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+get_next(/ncs:devices/device{ex0}) = {ex1}
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+get_next(/ncs:devices/device{ex1}) = {ex2}
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+get_next(/ncs:devices/device{ex2}) = false
+10-Nov-2017::14:04:52.529 maapi_xpath_eval_expr() result: 0
+
+10-Nov-2017::14:11:10.440 Query(1): Starting evaluation of:
+  /webui/webui-one:applications/application
+Selection:
+  id
+  category
+  href
+  title
+  description
+  promo-label
+10-Nov-2017::14:11:10.442 Query(1): done, returned 6 results
+10-Nov-2017::14:11:10.493 Query(2): Starting evaluation of:
+  /packages/package
+Selection:
+  name
+  description
+10-Nov-2017::14:11:10.493 Query(2): done, returned 2 results
+10-Nov-2017::14:16:46.926 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:16:46.926 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:16:46.928 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:16:46.929 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:16:46.930 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:16:46.931 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:17:33.561 Evaluating XPath for: /devices/device[name='ex0']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex0}/device-type/snmp/version") = not_found
+10-Nov-2017::14:17:33.562 XPath for: /devices/device[name='ex0']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:17:33.563 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:17:33.563 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:17:33.565 Evaluating XPath for: /devices/device[name='ex1']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex1}/device-type/snmp/version") = not_found
+10-Nov-2017::14:17:33.565 XPath for: /devices/device[name='ex1']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:17:33.566 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:17:33.567 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:17:40.654 Evaluating XPath for: /devices/device[name='ex2']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex2}/device-type/snmp/version") = not_found
+10-Nov-2017::14:17:40.655 XPath for: /devices/device[name='ex2']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:17:40.656 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:17:40.656 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:17:52.708 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:17:52.708 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:17:52.710 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:17:52.711 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:17:52.713 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:17:52.713 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:18:08.021 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:18:08.021 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:18:08.023 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:18:08.023 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:18:08.025 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:18:08.025 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:18:14.207 Evaluating XPath for: /devices/device[name='ex0']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex0}/device-type/snmp/version") = not_found
+10-Nov-2017::14:18:14.208 XPath for: /devices/device[name='ex0']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:18:14.209 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:18:14.209 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:18:14.211 Evaluating XPath for: /devices/device[name='ex1']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex1}/device-type/snmp/version") = not_found
+10-Nov-2017::14:18:14.211 XPath for: /devices/device[name='ex1']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:18:14.212 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:18:14.213 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:18:23.237 Evaluating XPath for: /devices/device[name='ex2']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex2}/device-type/snmp/version") = not_found
+10-Nov-2017::14:18:23.237 XPath for: /devices/device[name='ex2']/device-type/snmp/context-name returns false
+
+10-Nov-2017::14:18:23.239 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:18:23.239 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:22:32.836 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = false
+10-Nov-2017::14:22:32.836 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:22:32.840 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = false
+10-Nov-2017::14:22:32.840 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:22:32.842 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = false
+10-Nov-2017::14:22:32.842 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:24:02.425 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::14:24:02.426 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::14:24:02.428 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys/ntp/server[name='10.2.3.4']/key:
+  ../../key/name
+get_elem("/ncs:devices/device{ex1}/config/sys/ntp/server{10.2.3.4}/key") = 2
+exists("/ncs:devices/device{ex1}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex1}/config/sys/ntp/server{10.2.3.4}/key") = 2
+10-Nov-2017::14:24:02.429 XPath for: /devices/device[name='ex1']/config/r:sys/ntp/server[name='10.2.3.4']/key returns true
+
+10-Nov-2017::14:24:02.429 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys/ntp/controlkey:
+  ../key/name
+get_elem("/ncs:devices/device{ex1}/config/sys/ntp/controlkey") = 2
+exists("/ncs:devices/device{ex1}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex1}/config/sys/ntp/controlkey") = 2
+10-Nov-2017::14:24:02.430 XPath for: /devices/device[name='ex1']/config/r:sys/ntp/controlkey returns true
+
+10-Nov-2017::14:24:02.453 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::14:24:02.453 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::14:24:02.456 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys/ntp/server[name='10.2.3.4']/key:
+  ../../key/name
+get_elem("/ncs:devices/device{ex2}/config/sys/ntp/server{10.2.3.4}/key") = 2
+exists("/ncs:devices/device{ex2}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex2}/config/sys/ntp/server{10.2.3.4}/key") = 2
+10-Nov-2017::14:24:02.457 XPath for: /devices/device[name='ex2']/config/r:sys/ntp/server[name='10.2.3.4']/key returns true
+
+10-Nov-2017::14:24:02.457 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys/ntp/controlkey:
+  ../key/name
+get_elem("/ncs:devices/device{ex2}/config/sys/ntp/controlkey") = 2
+exists("/ncs:devices/device{ex2}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex2}/config/sys/ntp/controlkey") = 2
+10-Nov-2017::14:24:02.457 XPath for: /devices/device[name='ex2']/config/r:sys/ntp/controlkey returns true
+
+10-Nov-2017::14:24:02.482 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::14:24:02.483 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::14:24:02.485 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/ntp/server[name='10.2.3.4']/key:
+  ../../key/name
+get_elem("/ncs:devices/device{ex0}/config/sys/ntp/server{10.2.3.4}/key") = 2
+exists("/ncs:devices/device{ex0}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex0}/config/sys/ntp/server{10.2.3.4}/key") = 2
+10-Nov-2017::14:24:02.486 XPath for: /devices/device[name='ex0']/config/r:sys/ntp/server[name='10.2.3.4']/key returns true
+
+10-Nov-2017::14:24:02.486 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/ntp/controlkey:
+  ../key/name
+get_elem("/ncs:devices/device{ex0}/config/sys/ntp/controlkey") = 2
+exists("/ncs:devices/device{ex0}/config/sys/ntp/key{2}") = true
+get_elem("/ncs:devices/device{ex0}/config/sys/ntp/controlkey") = 2
+10-Nov-2017::14:24:02.487 XPath for: /devices/device[name='ex0']/config/r:sys/ntp/controlkey returns true
+
+10-Nov-2017::14:24:25.312 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:24:25.313 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:24:25.313 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:24:25.314 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:25:43.735 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:25:43.736 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:25:43.736 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:25:43.737 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:26:03.477 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:26:03.477 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:26:03.479 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:26:03.480 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:27:13.250 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:27:13.251 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:27:15.859 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:27:15.860 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:27:17.075 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:27:17.076 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:27:24.275 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:27:24.276 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:27:42.667 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:27:42.668 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:27:42.669 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:27:42.670 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:28:48.177 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:28:48.178 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:28:48.179 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:28:48.180 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:28:53.341 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:28:53.342 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:28:56.727 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:28:56.728 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:28:56.730 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::14:28:56.731 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::14:31:15.539 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:15.541 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:17.499 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:17.501 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:18.805 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:18.806 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:19.983 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:19.984 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:26.284 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:26.285 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:33.631 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:33.632 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:36.219 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:36.220 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:36.882 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:36.882 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:43.485 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:43.486 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:43.734 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:43.735 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:45.476 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:45.477 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:48.558 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:48.559 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:48.807 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:48.808 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:50.122 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:50.123 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:50.899 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:50.900 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:51.981 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:51.982 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:55.938 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:55.939 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:56.265 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:56.266 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:58.629 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:58.630 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:58.633 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:31:58.634 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:31:58.634 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::14:31:58.635 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:31:58.635 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::14:31:58.636 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:32:06.021 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::14:32:06.022 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::14:32:06.023 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::14:32:06.023 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::14:32:06.023 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::14:32:06.024 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::14:32:19.625 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::14:32:19.625 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::14:32:19.626 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::14:32:19.626 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::14:32:19.627 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::14:32:19.627 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::14:32:39.194 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::14:32:39.195 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:32:41.018 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::14:32:41.019 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:32:43.583 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::14:32:43.584 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:35:20.238 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:20.239 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:22.107 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:22.108 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:23.412 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:23.413 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:25.618 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:25.619 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:28.884 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::14:35:28.884 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::14:35:45.575 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:45.575 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:45.577 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::14:35:45.578 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::14:35:45.578 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::14:35:45.579 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::14:35:45.579 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::14:35:45.579 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::14:35:48.123 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::14:35:48.124 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::14:35:48.124 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::14:35:48.125 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:25:31.761 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:25:31.762 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:25:32.581 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:25:32.582 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:25:33.717 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:25:33.718 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:25:35.720 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:25:35.720 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:25:35.729 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:25:35.730 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:25:35.730 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:25:35.730 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::15:26:21.924 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:21.925 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:22.823 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:22.824 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:26.435 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:26.437 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:26.715 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:26.716 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:30.744 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:30.745 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:31.093 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:31.094 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:36.413 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:36.414 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:36.416 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:26:36.417 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:26:36.417 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:26:36.418 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:26:36.418 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:26:36.418 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::15:26:42.010 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:26:42.010 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:26:42.011 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::15:26:42.011 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:27:12.495 Evaluating XPath for: /devices/device[name='ex0']/device-type/snmp/context-name:
+  ../version = 'v3'
+get_elem("/ncs:devices/device{ex0}/device-type/snmp/version") = not_found
+10-Nov-2017::15:27:12.495 XPath for: /devices/device[name='ex0']/device-type/snmp/context-name returns false
+
+10-Nov-2017::15:27:12.497 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:27:12.497 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:27:12.498 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys/interfaces:
+  not(../../../ncs:module) or ../../../ncs:module[ncs:name='example-serial']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{example-serial}") = true
+10-Nov-2017::15:27:12.498 XPath for: /devices/device[name='ex0']/config/r:sys/interfaces returns true
+
+10-Nov-2017::15:29:20.024 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:20.026 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:21.959 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:21.960 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:22.407 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:22.408 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:23.870 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:23.871 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:23.873 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:23.873 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:23.874 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:29:23.874 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:29:23.874 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:29:23.875 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::15:29:27.642 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:29:27.642 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:29:27.643 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::15:29:27.643 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:29:51.128 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:51.129 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:51.131 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:29:51.132 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:29:51.132 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:29:51.133 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:29:58.998 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:29:58.999 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:29:58.999 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::15:29:58.999 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:30:30.222 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:30:30.223 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:30:31.943 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:30:31.944 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:30:32.945 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:30:32.947 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:30:33.632 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:30:33.632 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:30:33.634 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:30:33.635 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:30:33.635 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:30:33.636 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:30:36.064 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:30:36.065 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:30:52.814 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:30:52.815 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:30:53.962 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:30:53.963 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:30:54.400 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:30:54.401 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:30:55.196 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:30:55.197 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:31:42.696 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:31:42.696 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:31:45.429 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:31:45.430 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:31:45.432 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:31:45.433 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:31:45.435 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:31:45.435 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:31:55.100 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:31:55.100 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::15:32:26.492 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:32:26.493 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:32:26.874 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:32:26.875 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:32:26.877 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:32:26.878 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:32:26.878 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:32:26.879 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:32:26.879 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:32:26.880 XPath for: /devices/device[name='ex2']/config/r:sys returns true
+
+10-Nov-2017::15:32:29.152 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::15:32:29.152 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::15:32:29.153 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:32:29.153 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:32:29.153 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::15:32:29.154 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:33:06.861 Evaluating XPath for: /devices/device[name='ex0']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex0}/remote-node") = not_found
+exists("/ncs:devices/device{ex0}/device-type/netconf") = true
+10-Nov-2017::15:33:06.862 XPath for: /devices/device[name='ex0']/device-type returns true
+
+10-Nov-2017::15:33:06.862 Evaluating XPath for: /devices/device[name='ex1']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex1}/remote-node") = not_found
+exists("/ncs:devices/device{ex1}/device-type/netconf") = true
+10-Nov-2017::15:33:06.863 XPath for: /devices/device[name='ex1']/device-type returns true
+
+10-Nov-2017::15:33:06.863 Evaluating XPath for: /devices/device[name='ex2']/device-type:
+  ../remote-node or netconf or generic or cli or snmp
+get_elem("/ncs:devices/device{ex2}/remote-node") = not_found
+exists("/ncs:devices/device{ex2}/device-type/netconf") = true
+10-Nov-2017::15:33:06.863 XPath for: /devices/device[name='ex2']/device-type returns true
+
+10-Nov-2017::15:33:23.575 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:33:23.576 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:33:25.790 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:33:25.791 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:33:25.793 Evaluating XPath for: /devices/device[name='ex0']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex0}/module) = {example-serial}
+exists("/ncs:devices/device{ex0}/module{router}") = true
+10-Nov-2017::15:33:25.794 XPath for: /devices/device[name='ex0']/config/r:sys returns true
+
+10-Nov-2017::15:33:25.796 Evaluating XPath for: /devices/device[name='ex1']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex1}/module) = {example-serial}
+exists("/ncs:devices/device{ex1}/module{router}") = true
+10-Nov-2017::15:33:25.797 XPath for: /devices/device[name='ex1']/config/r:sys returns true
+
+10-Nov-2017::15:33:27.980 Evaluating XPath for: /devices/device[name='ex2']/config/r:sys:
+  not(../../ncs:module) or ../../ncs:module[ncs:name='router']
+get_next(/ncs:devices/device{ex2}/module) = {example-serial}
+exists("/ncs:devices/device{ex2}/module{router}") = true
+10-Nov-2017::15:33:27.981 XPath for: /devices/device[name='ex2']/config/r:sys returns true

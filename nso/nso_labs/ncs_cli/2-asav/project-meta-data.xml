@@ -1,0 +1,13 @@
+<project-meta-data xmlns="http://tail-f.com/ns/ncs-project">
+ <name>asav-aitang</name>
+  <project-version>1.0</project-version>
+  <description>asa lab</description>
+  <package>
+    <name>cisco-ios</name>
+    <url>http://engci-maven-master.cisco.com/artifactory/nso-release/tailf-releases/ncs-pkgs/cisco-ios/4.5/ncs-4.5-cisco-ios-5.5.1.tar.gz</url>
+  </package>
+  <package>
+    <name>cisco-asa</name>
+    <url>http://engci-maven-master.cisco.com/artifactory/nso-release/tailf-releases/ncs-pkgs/cisco-asa/4.5/ncs-4.5-cisco-asa-5.5.4.tar.gz</url>
+  </package>
+</project-meta-data>

@@ -1,0 +1,32 @@
+<INFO> 10-Nov-2017::14:03:57.862 AITANG-M-33SQ confd[28649]: - Enabling error log
+<INFO> 10-Nov-2017::14:03:57.868 AITANG-M-33SQ confd[28649]: - Writing error log to ./logs/confderr.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Writing daemon log to /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/logs/confd.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Writing NETCONF log to /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/logs/netconf.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Writing SNMP log to /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/logs/snmp.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Writing audit log to /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/logs/audit.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Writing developer log to /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/logs/devel.log
+<INFO> 10-Nov-2017::14:03:57.879 AITANG-M-33SQ confd[28649]: - Daemon logging started
+<DEBUG> 10-Nov-2017::14:03:57.905 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/ietf-netconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:03:57.906 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-common-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:03:57.907 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/ietf-netconf-acm.fxs
+<DEBUG> 10-Nov-2017::14:03:57.908 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/iana-crypt-hash.fxs
+<DEBUG> 10-Nov-2017::14:03:57.908 AITANG-M-33SQ confd[28649]: - Loading file ./router.fxs
+<DEBUG> 10-Nov-2017::14:03:57.910 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/ietf-yang-library.fxs
+<DEBUG> 10-Nov-2017::14:03:57.910 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/ietf-restconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:03:57.911 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/ietf-netconf-notifications.fxs
+<DEBUG> 10-Nov-2017::14:03:57.912 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-netconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:03:57.913 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-confd-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:03:57.915 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-acm.fxs
+<DEBUG> 10-Nov-2017::14:03:57.917 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-webui.fxs
+<DEBUG> 10-Nov-2017::14:03:57.917 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-rollback.fxs
+<DEBUG> 10-Nov-2017::14:03:57.918 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-kicker.fxs
+<DEBUG> 10-Nov-2017::14:03:57.919 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/tailf-aaa.fxs
+<DEBUG> 10-Nov-2017::14:03:57.920 AITANG-M-33SQ confd[28649]: - Loading file ./example-serial.fxs
+<DEBUG> 10-Nov-2017::14:03:57.933 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/nso-4.5/netsim/confd/etc/confd/confd.ccl
+<DEBUG> 10-Nov-2017::14:03:57.951 AITANG-M-33SQ confd[28649]: - Loading file /Users/aitang/github/nso_labs/tmp/netsim/ex/ex0/scripts/policy/check_dns.sh
+<INFO> 10-Nov-2017::14:03:58.037 AITANG-M-33SQ confd[28649]: - Starting to listen for Internal IPC on 127.0.0.1:5010
+<INFO> 10-Nov-2017::14:03:58.301 AITANG-M-33SQ confd[28649]: - CDB load: processing file: ./cdb/aaa_init.xml
+<INFO> 10-Nov-2017::14:03:58.328 AITANG-M-33SQ confd[28649]: - CDB load: processing file: ./cdb/sys.xml
+<INFO> 10-Nov-2017::14:03:58.498 AITANG-M-33SQ confd[28649]: - Starting to listen for NETCONF SSH on 0.0.0.0:12022
+<INFO> 10-Nov-2017::14:03:58.557 AITANG-M-33SQ confd[28649]: - Starting to listen for CLI SSH on 0.0.0.0:10022
+<INFO> 10-Nov-2017::14:03:58.663 AITANG-M-33SQ confd[28649]: - ConfD started vsn: 6.5

@@ -1,0 +1,645 @@
+**> sess:28 new session
+
+10-Nov-2017::14:23:55.646 **< sess:28 write:
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged</capability>
+    <capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=937fa3a5b7c7e914eb05451768bcc202</capability>
+    <capability>http://tail-f.com/ns/netconf/with-defaults/1.0</capability>
+    <capability>http://tail-f.com/ns/netconf/actions/1.0</capability>
+    <capability>http://tail-f.com/ns/netconf/extensions</capability>
+    <capability>http://example.com/example-serial?module=example-serial</capability>
+    <capability>http://example.com/router?module=router&revision=2008-11-04</capability>
+    <capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16</capability>
+    <capability>http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28</capability>
+    <capability>http://tail-f.com/ns/webui?module=tailf-webui&revision=2013-03-07</capability>
+    <capability>http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07</capability>
+    <capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14</capability>
+    <capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14</capability>
+    <capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24</capability>
+    <capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring?module=ietf-restconf-monitoring&revision=2016-08-15</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15</capability>
+    <capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01</capability>
+  </capabilities>
+  <session-id>28</session-id>
+</hello>
+
+10-Nov-2017::14:23:55.658 **> sess:28 read:
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+  </capabilities>
+</hello>
+]]>]]>
+#212
+<rpc message-id="1" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get>
+    <filter>
+      <modules-state xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library"/>
+    </filter>
+  </get>
+</rpc>
+
+10-Nov-2017::14:23:55.680 **< sess:28 write:
+<rpc-reply message-id="1" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <data>
+    <modules-state xmlns="urn:ietf:params:xml:ns:yang:ietf-yang-library">
+      <module-set-id>937fa3a5b7c7e914eb05451768bcc202</module-set-id>
+      <module>
+        <name>example-serial</name>
+        <revision/>
+        <namespace>http://example.com/example-serial</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>iana-crypt-hash</name>
+        <revision>2014-08-06</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:iana-crypt-hash</namespace>
+        <feature>crypt-hash-md5</feature>
+        <feature>crypt-hash-sha-256</feature>
+        <feature>crypt-hash-sha-512</feature>
+        <conformance-type>import</conformance-type>
+      </module>
+      <module>
+        <name>ietf-inet-types</name>
+        <revision>2013-07-15</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-inet-types</namespace>
+        <conformance-type>import</conformance-type>
+      </module>
+      <module>
+        <name>ietf-netconf</name>
+        <revision>2011-06-01</revision>
+        <namespace>urn:ietf:params:xml:ns:netconf:base:1.0</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-netconf-acm</name>
+        <revision>2012-02-22</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-acm</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-netconf-monitoring</name>
+        <revision>2010-10-04</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-netconf-notifications</name>
+        <revision>2012-02-06</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-netconf-with-defaults</name>
+        <revision>2011-06-01</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-restconf-monitoring</name>
+        <revision>2016-08-15</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-yang-library</name>
+        <revision>2016-06-21</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-yang-library</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>ietf-yang-types</name>
+        <revision>2013-07-15</revision>
+        <namespace>urn:ietf:params:xml:ns:yang:ietf-yang-types</namespace>
+        <conformance-type>import</conformance-type>
+      </module>
+      <module>
+        <name>router</name>
+        <revision>2008-11-04</revision>
+        <namespace>http://example.com/router</namespace>
+        <conformance-type>implement</conformance-type>
+        <submodule>
+          <name>router-dns</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+        <submodule>
+          <name>router-interfaces</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+        <submodule>
+          <name>router-ntp</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+        <submodule>
+          <name>router-routes</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+        <submodule>
+          <name>router-syslog</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+        <submodule>
+          <name>router-types</name>
+          <revision>2008-11-04</revision>
+        </submodule>
+      </module>
+      <module>
+        <name>tailf-aaa</name>
+        <revision>2015-06-16</revision>
+        <namespace>http://tail-f.com/ns/aaa/1.1</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>tailf-acm</name>
+        <revision>2013-03-07</revision>
+        <namespace>http://tail-f.com/yang/acm</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>tailf-common-monitoring</name>
+        <revision>2013-06-14</revision>
+        <namespace>http://tail-f.com/yang/common-monitoring</namespace>
+        <conformance-type>import</conformance-type>
+      </module>
+      <module>
+        <name>tailf-confd-monitoring</name>
+        <revision>2013-06-14</revision>
+        <namespace>http://tail-f.com/yang/confd-monitoring</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>tailf-kicker</name>
+        <revision>2017-09-28</revision>
+        <namespace>http://tail-f.com/ns/kicker</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>tailf-netconf-monitoring</name>
+        <revision>2016-11-24</revision>
+        <namespace>http://tail-f.com/yang/netconf-monitoring</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+      <module>
+        <name>tailf-webui</name>
+        <revision>2013-03-07</revision>
+        <namespace>http://tail-f.com/ns/webui</namespace>
+        <conformance-type>implement</conformance-type>
+      </module>
+    </modules-state>
+  </data>
+</rpc-reply>
+
+##
+
+#228
+<rpc message-id="2" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get-config>
+    <source>
+      <running/>
+    </source>
+    <filter>
+      <sys xmlns="http://example.com/router"/>
+    </filter>
+
+10-Nov-2017::14:24:02.384 **< sess:28 write:
+  </get-config>
+<rpc-reply message-id="2" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"</rpc>
+>
+  <data>
+    <sys xmlns="http://example.com/router">
+      <interfaces>
+        <interface>
+          <name>eth0</name>
+          <unit>
+            <name>0</name>
+            <enabled>true</enabled>
+            <family>
+              <inet>
+                <address>
+                  <name>192.168.1.2</name>
+                  <prefix-length>16</prefix-length>
+                </address>
+              </inet>
+            </family>
+          </unit>
+          <unit>
+            <name>1</name>
+            <enabled>true</enabled>
+            <family>
+              <inet>
+                <address>
+                  <name>192.168.1.3</name>
+                  <prefix-length>16</prefix-length>
+                </address>
+              </inet>
+            </family>
+          </unit>
+          <unit>
+            <name>2</name>
+            <enabled>true</enabled>
+            <description>My Vlan</description>
+            <vlan-id>18</vlan-id>
+          </unit>
+        </interface>
+        <serial xmlns="http://example.com/example-serial">
+          <name>ppp0</name>
+          <ppp>
+            <accounting>acme</accounting>
+          </ppp>
+          <authentication>
+            <method>pap</method>
+          </authentication>
+          <authorization>admin</authorization>
+        </serial>
+      </interfaces>
+      <routes>
+        <inet>
+          <route>
+            <name>10.10.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 1</description>
+            <next-hop>
+              <name>192.168.10.1</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.20.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 2</description>
+            <next-hop>
+              <name>192.168.10.2</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.30.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 3</description>
+            <next-hop>
+              <name>192.168.10.3</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.40.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 4</description>
+            <next-hop>
+              <name>192.168.10.4</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.50.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 5</description>
+            <next-hop>
+              <name>192.168.10.5</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.60.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 6</description>
+            <next-hop>
+              <name>192.168.10.6</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+          <route>
+            <name>10.70.0.0</name>
+            <prefix-length>16</prefix-length>
+            <description>Route 7</description>
+            <next-hop>
+              <name>192.168.10.7</name>
+              <metric>100</metric>
+            </next-hop>
+          </route>
+        </inet>
+      </routes>
+      <syslog>
+        <server>
+          <name>10.3.4.5</name>
+          <enabled>true</enabled>
+          <selector>
+            <name>8</name>
+            <facility>auth</facility>
+            <facility>authpriv</facility>
+            <facility>local0</facility>
+          </selector>
+          <administrator>Joe Smith</administrator>
+        </server>
+      </syslog>
+      <ntp>
+        <server>
+          <name>10.2.3.4</name>
+          <key>2</key>
+        </server>
+        <key>
+          <name>2</name>
+        </key>
+        <controlkey>2</controlkey>
+      </ntp>
+      <dns>
+        <server>
+          <address>10.2.3.4</address>
+        </server>
+      </dns>
+    </sys>
+  </data>
+</rpc-reply>
+
+##
+
+#419
+<rpc message-id="3" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <filter>
+      <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"
+10-Nov-2017::14:24:02.413 **< sess:28 write:
+>
+<rpc-reply message-id="3" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"        <datastores>
+>
+  <data          <datastore>
+>
+    <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"            <name>
+>      <datastoresrunning>
+</name>
+        <datastore            <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring">
+/>
+          <name xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"          </datastore>
+>        </datastores>
+running      </netconf-state>
+</name>
+    </filter>
+          <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring"  </get>
+></rpc>
+1510-344240-472582</transaction-id>
+        </datastore>
+      </datastores>
+    </netconf-state>
+  </data>
+</rpc-reply>
+
+##
+
+#130
+<rpc message-id="4" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+**> sess:28 session aborted
+  <close-session**> sess:29 new session
+
+10-Nov-2017::14:32:19.674 **< sess:29 write:
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+    <capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+    <capability>urn:ietf:params:netconf:capability:with-defaults:1.0?basic-mode=explicit&also-supported=report-all-tagged</capability>
+    <capability>urn:ietf:params:netconf:capability:yang-library:1.0?revision=2016-06-21&module-set-id=937fa3a5b7c7e914eb05451768bcc202</capability>
+    <capability>http://tail-f.com/ns/netconf/with-defaults/1.0</capability>
+    <capability>http://tail-f.com/ns/netconf/actions/1.0</capability>
+    <capability>http://tail-f.com/ns/netconf/extensions</capability>
+    <capability>http://example.com/example-serial?module=example-serial</capability>
+    <capability>http://example.com/router?module=router&revision=2008-11-04</capability>
+    <capability>http://tail-f.com/ns/aaa/1.1?module=tailf-aaa&revision=2015-06-16</capability>
+    <capability>http://tail-f.com/ns/kicker?module=tailf-kicker&revision=2017-09-28</capability>
+    <capability>http://tail-f.com/ns/webui?module=tailf-webui&revision=2013-03-07</capability>
+    <capability>http://tail-f.com/yang/acm?module=tailf-acm&revision=2013-03-07</capability>
+    <capability>http://tail-f.com/yang/common-monitoring?module=tailf-common-monitoring&revision=2013-06-14</capability>
+    <capability>http://tail-f.com/yang/confd-monitoring?module=tailf-confd-monitoring&revision=2013-06-14</capability>
+    <capability>http://tail-f.com/yang/netconf-monitoring?module=tailf-netconf-monitoring&revision=2016-11-24</capability>
+    <capability>urn:ietf:params:xml:ns:yang:iana-crypt-hash?module=iana-crypt-hash&revision=2014-08-06&features=crypt-hash-sha-512,crypt-hash-sha-256,crypt-hash-md5</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-inet-types?module=ietf-inet-types&revision=2013-07-15</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-acm?module=ietf-netconf-acm&revision=2012-02-22</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring?module=ietf-netconf-monitoring&revision=2010-10-04</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-notifications?module=ietf-netconf-notifications&revision=2012-02-06</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-restconf-monitoring?module=ietf-restconf-monitoring&revision=2016-08-15</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-yang-library?module=ietf-yang-library&revision=2016-06-21</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-yang-types?module=ietf-yang-types&revision=2013-07-15</capability>
+    <capability>urn:ietf:params:xml:ns:netconf:base:1.0?module=ietf-netconf&revision=2011-06-01</capability>
+    <capability>urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults?module=ietf-netconf-with-defaults&revision=2011-06-01</capability>
+  </capabilities>
+  <session-id>29</session-id>
+</hello>
+
+10-Nov-2017::14:32:19.680 **> sess:29 read:
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+    <capability>urn:ietf:params:netconf:base:1.1</capability>
+  </capabilities>
+</hello>
+]]>]]>
+#132
+<rpc message-id="1" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <discard-changes/>
+</rpc>
+
+10-Nov-2017::14:32:19.705 **< sess:29 write:
+<rpc-reply message-id="1" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+#158
+<rpc message-id="2" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <lock>
+    <target>
+      <candidate/>
+    </target>
+  </lock>
+</rpc>
+
+10-Nov-2017::14:32:19.713 **< sess:29 write:
+<rpc-reply message-id="2" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+#419
+<rpc message-id="3" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <filter>
+      <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+        <datastores>
+          <datastore
+10-Nov-2017::14:32:19.715 **< sess:29 write:
+>
+<rpc-reply message-id="3" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"            <name>
+>  <datarunning>
+</name>
+    <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"            <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring">
+/>
+      <datastores          </datastore>
+>
+        </datastores>
+        <datastore      </netconf-state>
+>
+    </filter>
+          <name xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"  </get>
+></rpc>
+running</name>
+          <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring">1510-344240-472582</transaction-id>
+        </datastore>
+      </datastores>
+    </netconf-state>
+  </data>
+</rpc-reply>
+
+##
+
+#514
+<rpc message-id="4" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <edit-config xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <target>
+      <candidate/>
+    </target>
+    <test-option>test-then-set</test-option>
+    <error-option>rollback-on-error</error-option>
+    <config>
+      <sys xmlns="http://example.com/router">
+        <routes>
+          <inet>
+            <route>
+              <name>10.2.0.0
+10-Nov-2017::14:32:19.722 **< sess:29 write:
+</name>
+<rpc-reply message-id="4" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"              <prefix-length>
+>  <ok24/>
+</prefix-length>
+</rpc-reply>
+              <next-hop>
+                <name>10.2.0.254</name>
+              </next-hop>
+            </route>
+          </inet>
+        </routes>
+      </sys>
+    </config>
+  </edit-config>
+</rpc>
+
+#166
+<rpc message-id="5" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <validate>
+    <source>
+      <candidate/>
+    </source>
+  </validate>
+</rpc>
+
+10-Nov-2017::14:32:19.764 **< sess:29 write:
+<rpc-reply message-id="5" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+##
+
+#145
+<rpc message-id="6" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <commit>
+    <confirmed/>
+  </commit>
+</rpc>
+
+10-Nov-2017::14:32:19.787 **< sess:29 write:
+<rpc-reply message-id="6" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+#123
+<rpc message-id="7" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <commit/>
+</rpc>
+
+10-Nov-2017::14:32:19.810 **< sess:29 write:
+<rpc-reply message-id="7" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+#419
+<rpc message-id="8" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <get xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <filter>
+      <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+        <datastores>
+
+10-Nov-2017::14:32:19.812 **< sess:29 write:
+          <datastore<rpc-reply message-id="8" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+>
+            <name  <data>>
+running    <netconf-state xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring"</name>
+>
+            <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring"      <datastores/>
+>
+          </datastore>
+        <datastore        </datastores>
+>
+      </netconf-state>
+          <name xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0"    </filter>
+>  </get>
+running</rpc>
+</name>
+          <transaction-id xmlns="http://tail-f.com/yang/netconf-monitoring">1510-345939-786849</transaction-id>
+        </datastore>
+      </datastores>
+    </netconf-state>
+  </data>
+</rpc-reply>
+
+##
+
+#162
+<rpc message-id="9" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <unlock>
+    <target>
+      <candidate/>
+    </target>
+  </unlock>
+</rpc>
+
+10-Nov-2017::14:32:19.830 **< sess:29 write:
+<rpc-reply message-id="9" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <ok/>
+</rpc-reply>
+
+##
+
+#131
+<rpc message-id="10" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+**> sess:29 session aborted
+  <close-session

@@ -1,0 +1,33 @@
+Starting java-vm with options:
+' -classpath :/Users/aitang/nso-4.5/java/jar/* -Dport=4569 -Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom -Dfile.encoding=UTF-8'
+NCS JVM STARTING
+NcsLogger applying Default configuration!
+<INFO> 10-Nov-2017::14:04:46.709 NcsMain JVM-Launcher: - CONNECTED TO to NCS --> Socket[addr=/127.0.0.1,port=4569,localport=58956]
+<INFO> 10-Nov-2017::14:04:46.726 NcsMain JVM-Launcher: - READ SOCKET =>
+<INFO> 10-Nov-2017::14:04:46.733 NcsMain JVM-Launcher: -  <= GOT INIT_JVM
+JMXURL : service:jmx:rmi://127.0.0.1:9901/jndi/rmi://127.0.0.1:9902/ncs
+<INFO> 10-Nov-2017::14:04:47.213 NcsMain JVM-Launcher: - ALARM SERVICE STARTED
+<INFO> 10-Nov-2017::14:04:47.213 NcsMain JVM-Launcher: - DONE COMMAND --> INIT_JVM
+<INFO> 10-Nov-2017::14:04:47.214 NcsMain JVM-Launcher: - READ SOCKET =>
+<INFO> 10-Nov-2017::14:04:47.214 NcsMain JVM-Launcher: -  <= GOT LOAD_SHARED_JARS
+<INFO> 10-Nov-2017::14:04:47.215 NcsMain JVM-Launcher: - LOAD SHARED PACKAGE ["router"] -->
+<INFO> 10-Nov-2017::14:04:47.215 NcsMain JVM-Launcher: - loading shared jar: file:///Users/aitang/github/nso_labs/tmp/state/packages-in-use/1/router/shared-jar/lb-ns.jar
+<INFO> 10-Nov-2017::14:04:47.215 NcsMain JVM-Launcher: - LOAD SHARED PACKAGE ["router"] --> OK
+<INFO> 10-Nov-2017::14:04:47.215 NcsMain JVM-Launcher: - DONE COMMAND --> LOAD_SHARED_JARS
+<INFO> 10-Nov-2017::14:04:47.216 NcsMain JVM-Launcher: - READ SOCKET =>
+<INFO> 10-Nov-2017::14:04:47.216 NcsMain JVM-Launcher: -  <= GOT LOAD_PACKAGE
+<INFO> 10-Nov-2017::14:04:47.216 NcsMain JVM-Launcher: - LOADING PACKAGE ["router"] -->
+<INFO> 10-Nov-2017::14:04:47.217 NcsMain JVM-Launcher: - LOADING PACKAGE ["router"] --> LOADED
+<INFO> 10-Nov-2017::14:04:47.217 NcsMain JVM-Launcher: - DONE COMMAND --> LOAD_PACKAGE
+<INFO> 10-Nov-2017::14:04:47.218 NcsMain JVM-Launcher: - READ SOCKET =>
+<INFO> 10-Nov-2017::14:04:47.218 NcsMain JVM-Launcher: -  <= GOT INSTANTIATE_COMPONENT
+<INFO> 10-Nov-2017::14:04:47.218 NcsMain JVM-Launcher: - INSTANTIATE COMPONENT ["router:router"] -->
+<INFO> 10-Nov-2017::14:04:47.219 NcsMain JVM-Launcher: - => Nothing to deploy for component router:router
+<INFO> 10-Nov-2017::14:04:47.219 NcsMain JVM-Launcher: - INSTANTIATE COMPONENT ["router:router"] --> DONE
+<INFO> 10-Nov-2017::14:04:47.219 NcsMain JVM-Launcher: - DONE COMMAND --> INSTANTIATE_COMPONENT
+<INFO> 10-Nov-2017::14:04:47.219 NcsMain JVM-Launcher: - READ SOCKET =>
+<INFO> 10-Nov-2017::14:04:47.220 NcsMain JVM-Launcher: -  <= GOT DONE_LOADING
+<INFO> 10-Nov-2017::14:04:47.220 NcsMain JVM-Launcher: - DONE LOADING  -->
+<INFO> 10-Nov-2017::14:04:47.220 NcsMain JVM-Launcher: - DONE LOADING --> OK
+<INFO> 10-Nov-2017::14:04:47.220 NcsMain JVM-Launcher: - DONE COMMAND --> DONE_LOADING
+<INFO> 10-Nov-2017::14:04:47.221 NcsMain JVM-Launcher: - READ SOCKET =>

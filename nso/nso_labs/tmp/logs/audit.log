@@ -1,0 +1,159 @@
+<INFO> 10-Nov-2017::14:05:35.432 AITANG-M-33SQ ncs[28960]: audit user: admin/52 assigned to groups: admin,staff,access_bpf,com.apple.sharepoint.group.1,everyone,localaccounts,_appserverusr,_appserveradm,_lpadmin,_appstore,_lpoperator,_developer,com.apple.access_ftp,com.apple.access_screensharing,com.apple.access_ssh
+<INFO> 10-Nov-2017::14:10:21.896 AITANG-M-33SQ ncs[28960]: audit user: [withheld]/0 login failed via cli from 127.0.0.1:59264 with ssh: Couldn't read "/var/ncs/homes/admin/.ssh/authorized_keys2": "no such file or directory"
+<INFO> 10-Nov-2017::14:10:24.223 AITANG-M-33SQ ncs[28960]: audit user: admin/0 local authentication succeeded via cli from 127.0.0.1:59264 with ssh, member of groups: admin
+<INFO> 10-Nov-2017::14:10:24.223 AITANG-M-33SQ ncs[28960]: audit user: admin/0 logged in via cli from 127.0.0.1:59264 with ssh using local authentication
+<INFO> 10-Nov-2017::14:10:24.226 AITANG-M-33SQ ncs[28960]: audit user: admin/53 assigned to groups: admin
+<INFO> 10-Nov-2017::14:10:27.251 AITANG-M-33SQ ncs[28960]: audit user: admin/53 CLI 'exit'
+<INFO> 10-Nov-2017::14:10:27.459 AITANG-M-33SQ ncs[28960]: audit user: admin/0 logged out <local> user
+<INFO> 10-Nov-2017::14:11:04.901 AITANG-M-33SQ ncs[28960]: audit user: [withheld]/0 local authentication failed via webui from 127.0.0.1:59329 with http: no such local user
+<INFO> 10-Nov-2017::14:11:04.914 AITANG-M-33SQ ncs[28960]: audit user: [withheld]/0 PAM authentication failed via webui from 127.0.0.1:59329 with http: phase auth, authentication error
+<INFO> 10-Nov-2017::14:11:04.914 AITANG-M-33SQ ncs[28960]: audit user: [withheld]/0 login failed via webui from 127.0.0.1:59329 with http: authentication error
+<INFO> 10-Nov-2017::14:11:10.085 AITANG-M-33SQ ncs[28960]: audit user: admin/0 local authentication succeeded via webui from 127.0.0.1:59329 with http, member of groups: admin
+<INFO> 10-Nov-2017::14:11:10.085 AITANG-M-33SQ ncs[28960]: audit user: admin/0 logged in via webui from 127.0.0.1:59329 with http using local authentication
+<INFO> 10-Nov-2017::14:11:10.086 AITANG-M-33SQ ncs[28960]: audit user: admin/54 assigned to groups: admin
+<INFO> 10-Nov-2017::14:13:56.736 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'configure'
+<INFO> 10-Nov-2017::14:13:56.748 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:15:03.292 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'set devices global-settings trace pretty'
+<INFO> 10-Nov-2017::14:15:03.304 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:15:08.130 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'commit'
+<INFO> 10-Nov-2017::14:15:08.141 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:15:57.133 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:15:57.134 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:16:01.319 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'configure'
+<INFO> 10-Nov-2017::14:16:01.319 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:16:11.343 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:16:11.343 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:16:17.002 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'configure'
+<INFO> 10-Nov-2017::14:16:17.003 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:16:29.319 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:16:29.320 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:16:46.906 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:16:46.931 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:17:33.559 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:17:41.296 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:17:52.705 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:17:52.713 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:18:08.018 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:18:08.026 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:18:14.205 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:18:24.090 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:20:47.923 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'configure'
+<INFO> 10-Nov-2017::14:20:47.924 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:21:33.408 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'set devices global-settings trace pretty'
+<INFO> 10-Nov-2017::14:21:33.409 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:21:36.444 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:21:36.444 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:22:32.833 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device'
+<INFO> 10-Nov-2017::14:22:32.843 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:23:55.517 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'request devices connect'
+<INFO> 10-Nov-2017::14:23:55.745 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:24:02.370 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'request devices sync-from'
+<INFO> 10-Nov-2017::14:24:02.506 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:24:25.311 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config'
+<INFO> 10-Nov-2017::14:25:35.617 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:25:43.734 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config'
+<INFO> 10-Nov-2017::14:25:46.384 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:26:03.478 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys'
+<INFO> 10-Nov-2017::14:26:11.618 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:27:17.078 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys routes'
+<INFO> 10-Nov-2017::14:27:20.074 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:27:24.277 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys syslog'
+<INFO> 10-Nov-2017::14:27:24.279 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:27:42.669 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys'
+<INFO> 10-Nov-2017::14:28:13.230 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:28:48.179 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys'
+<INFO> 10-Nov-2017::14:28:50.625 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI aborted
+<INFO> 10-Nov-2017::14:28:56.729 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex0 config r:sys interfaces'
+<INFO> 10-Nov-2017::14:28:58.646 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:29:11.575 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'configure'
+<INFO> 10-Nov-2017::14:29:11.575 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:31:58.632 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'set devices device ex0..2 config r:sys routes inet route 10.2.0.0 24 next-hop 10.2.0.254'
+<INFO> 10-Nov-2017::14:31:58.639 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:32:06.017 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'commit dry-run outformat native'
+<INFO> 10-Nov-2017::14:32:06.070 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:32:19.618 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'commit'
+<INFO> 10-Nov-2017::14:32:19.835 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:32:29.968 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:32:29.969 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:32:43.586 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show configuration devices device ex2 config r:sys routes'
+<INFO> 10-Nov-2017::14:33:09.443 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI aborted
+<INFO> 10-Nov-2017::14:34:17.429 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'show devices list'
+<INFO> 10-Nov-2017::14:34:17.431 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI done
+<INFO> 10-Nov-2017::14:34:34.753 AITANG-M-33SQ ncs[28960]: audit user: admin/52 CLI 'exit'
+<INFO> 10-Nov-2017::14:34:35.627 AITANG-M-33SQ ncs[28960]: audit user: admin/85 assigned to groups: admin,staff,access_bpf,com.apple.sharepoint.group.1,everyone,localaccounts,_appserverusr,_appserveradm,_lpadmin,_appstore,_lpoperator,_developer,com.apple.access_ftp,com.apple.access_screensharing,com.apple.access_ssh
+<INFO> 10-Nov-2017::14:35:06.906 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI 'configure'
+<INFO> 10-Nov-2017::14:35:06.906 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI done
+<INFO> 10-Nov-2017::14:35:25.620 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI 'set devices device ex0 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::14:35:25.621 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI done
+<INFO> 10-Nov-2017::14:35:28.877 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI 'commit'
+<INFO> 10-Nov-2017::14:35:29.004 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI done
+<INFO> 10-Nov-2017::14:35:45.576 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI 'set devices device ex0..2 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::14:35:45.581 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI done
+<INFO> 10-Nov-2017::14:35:48.116 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI 'commit'
+<INFO> 10-Nov-2017::14:35:48.149 AITANG-M-33SQ ncs[28960]: audit user: admin/85 CLI aborted
+<INFO> 10-Nov-2017::15:25:06.185 AITANG-M-33SQ ncs[28960]: audit user: admin/91 assigned to groups: admin,staff,access_bpf,com.apple.sharepoint.group.1,everyone,localaccounts,_appserverusr,_appserveradm,_lpadmin,_appstore,_lpoperator,_developer,com.apple.access_ftp,com.apple.access_screensharing,com.apple.access_ssh
+<INFO> 10-Nov-2017::15:25:20.407 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'configure'
+<INFO> 10-Nov-2017::15:25:20.407 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:25:35.721 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'delete devices device ex1..2 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:25:35.731 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:25:56.396 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit commit-queue sync'
+<INFO> 10-Nov-2017::15:25:56.397 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:26:36.415 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'set devices device ex0..2 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:26:36.420 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:26:42.003 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:26:42.033 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:27:12.492 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show devices device'
+<INFO> 10-Nov-2017::15:27:14.119 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:27:41.822 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show devices device state'
+<INFO> 10-Nov-2017::15:27:41.824 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:27:56.681 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'exit'
+<INFO> 10-Nov-2017::15:27:58.827 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:28:04.252 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'exit'
+<INFO> 10-Nov-2017::15:28:06.712 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:28:20.982 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show devices device state'
+<INFO> 10-Nov-2017::15:28:40.316 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:28:49.006 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show devices commit-queue'
+<INFO> 10-Nov-2017::15:28:49.008 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:29:00.153 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'configure'
+<INFO> 10-Nov-2017::15:29:00.153 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:29:23.872 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'set devices device ex0..2 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:29:23.876 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:29:27.636 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:29:27.663 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:29:51.130 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'set devices device ex0..1 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:29:51.133 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:29:58.992 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:29:59.019 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:30:10.827 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'exit'
+<INFO> 10-Nov-2017::15:30:12.937 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:30:16.326 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'configure'
+<INFO> 10-Nov-2017::15:30:16.327 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:30:33.633 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'set devices device ex0..1 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:30:33.637 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:30:36.059 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:30:36.079 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:30:55.198 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'delete devices device ex1 config r:sys ntp key 3'
+<INFO> 10-Nov-2017::15:30:55.199 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:31:04.466 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit commit-queue async'
+<INFO> 10-Nov-2017::15:31:04.466 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:31:09.168 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:31:09.168 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:31:31.881 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'exit'
+<INFO> 10-Nov-2017::15:31:31.882 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:31:45.431 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show configuration devices device ex0..2 config r:sys ntp'
+<INFO> 10-Nov-2017::15:32:00.241 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:32:07.713 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'configure'
+<INFO> 10-Nov-2017::15:32:07.714 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:32:26.876 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'set devices device ex0..2 config r:sys ntp key 5'
+<INFO> 10-Nov-2017::15:32:26.881 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:32:29.144 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit'
+<INFO> 10-Nov-2017::15:32:29.208 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI aborted
+<INFO> 10-Nov-2017::15:33:06.855 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'commit commit-queue async'
+<INFO> 10-Nov-2017::15:33:06.872 AITANG-M-33SQ ncs[28960]: audit user: admin/94 assigned to groups: admin
+<INFO> 10-Nov-2017::15:33:06.916 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:33:13.233 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'exit'
+<INFO> 10-Nov-2017::15:33:13.233 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:33:25.792 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show configuration devices device ex0..2 config r:sys ntp'
+<INFO> 10-Nov-2017::15:33:32.862 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done
+<INFO> 10-Nov-2017::15:33:55.680 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI 'show devices commit-queue'
+<INFO> 10-Nov-2017::15:33:55.685 AITANG-M-33SQ ncs[28960]: audit user: admin/91 CLI done

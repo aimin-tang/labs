@@ -1,0 +1,30 @@
+module phys-if {
+  identity ethernet {
+    descriptioin "Ethernet";
+  }
+  identity eth-1G {
+    base ethernet;
+    description "1 Gig";
+  }
+  identity eth-10G {
+    base ethernet;
+    description "10 Gig";
+  }
+}
+
+module newer {
+  identity eth-40G {
+    base phys-if:ethernet;
+    description "40 Gig";
+  }
+  identity eth-100G {
+    base phys-if:ethernet;
+    description "100 Gig";
+  }
+
+  leaf eth-type{
+    type identityref {
+      base "phys-if:ethernet";
+    }
+  }
+}

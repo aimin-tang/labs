@@ -1,0 +1,155 @@
+<INFO> 10-Nov-2017::14:04:45.269 AITANG-M-33SQ ncs[28960]: - Enabling error log
+<INFO> 10-Nov-2017::14:04:45.275 AITANG-M-33SQ ncs[28960]: - Writing error log to ./logs/ncserr.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing daemon log to /Users/aitang/github/nso_labs/tmp/logs/ncs.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing NETCONF log to /Users/aitang/github/nso_labs/tmp/logs/netconf.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing SNMP log to /Users/aitang/github/nso_labs/tmp/logs/snmp.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing audit log to /Users/aitang/github/nso_labs/tmp/logs/audit.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing developer log to /Users/aitang/github/nso_labs/tmp/logs/devel.log
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Writing XPath trace log to /Users/aitang/github/nso_labs/tmp/logs/xpath.trace
+<INFO> 10-Nov-2017::14:04:45.286 AITANG-M-33SQ ncs[28960]: - Daemon logging started
+<DEBUG> 10-Nov-2017::14:04:45.349 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ietf-netconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:04:45.350 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-common-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:04:45.351 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-webui.fxs
+<DEBUG> 10-Nov-2017::14:04:45.352 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-ned.fxs
+<DEBUG> 10-Nov-2017::14:04:45.352 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ietf-yang-library.fxs
+<DEBUG> 10-Nov-2017::14:04:45.353 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-ALARM-TC-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.354 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/ITU-ALARM-TC-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.355 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/IANA-ITU-ALARM-TC-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.356 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMPv2-TC.fxs
+<DEBUG> 10-Nov-2017::14:04:45.356 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-FRAMEWORK-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.357 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ietf-netconf-acm.fxs
+<DEBUG> 10-Nov-2017::14:04:45.358 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/iana-crypt-hash.fxs
+<DEBUG> 10-Nov-2017::14:04:45.358 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-USER-BASED-SM-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.359 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:04:45.362 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-kicker.fxs
+<DEBUG> 10-Nov-2017::14:04:45.363 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-TARGET-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.364 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs.fxs
+<DEBUG> 10-Nov-2017::14:04:45.382 AITANG-M-33SQ ncs[28960]: - Loading file ./state/packages-in-use/1/router/load-dir/router.fxs
+<DEBUG> 10-Nov-2017::14:04:45.387 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ietf-yang-smiv2.fxs
+<DEBUG> 10-Nov-2017::14:04:45.388 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ietf-restconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:04:45.389 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-netmod-netconf.fxs
+<DEBUG> 10-Nov-2017::14:04:45.389 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/snmp.fxs
+<DEBUG> 10-Nov-2017::14:04:45.392 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/encryption-usm.fxs
+<DEBUG> 10-Nov-2017::14:04:45.392 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-netconf-monitoring.fxs
+<DEBUG> 10-Nov-2017::14:04:45.393 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-configuration-policy.fxs
+<DEBUG> 10-Nov-2017::14:04:45.394 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-acm.fxs
+<DEBUG> 10-Nov-2017::14:04:45.395 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-webui-one.fxs
+<DEBUG> 10-Nov-2017::14:04:45.395 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-rollback.fxs
+<DEBUG> 10-Nov-2017::14:04:45.396 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-webui.fxs
+<DEBUG> 10-Nov-2017::14:04:45.397 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/tailf-ncs-snmp.fxs
+<DEBUG> 10-Nov-2017::14:04:45.398 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-scheduler.fxs
+<DEBUG> 10-Nov-2017::14:04:45.399 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-event-forwarding.fxs
+<DEBUG> 10-Nov-2017::14:04:45.399 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-ncs-alarms.fxs
+<DEBUG> 10-Nov-2017::14:04:45.402 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/TRANSPORT-ADDRESS-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.402 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-TOP-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.403 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-ALARM-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.403 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMPv2-SMI.fxs
+<DEBUG> 10-Nov-2017::14:04:45.404 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMPv2-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.405 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-VIEW-BASED-ACM-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.406 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-NOTIFICATION-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.407 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-MPD-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.407 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/SNMP-COMMUNITY-MIB.fxs
+<DEBUG> 10-Nov-2017::14:04:45.408 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/IPV6-TC.fxs
+<DEBUG> 10-Nov-2017::14:04:45.409 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/tailf-aaa.fxs
+<DEBUG> 10-Nov-2017::14:04:45.410 AITANG-M-33SQ ncs[28960]: - Loading file ./state/packages-in-use/1/router/load-dir/example-serial.fxs
+<DEBUG> 10-Nov-2017::14:04:45.434 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/ncs.ccl
+<DEBUG> 10-Nov-2017::14:04:45.444 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/smart-license.ccl
+<DEBUG> 10-Nov-2017::14:04:45.446 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/scripts/command/device_save.sh
+<INFO> 10-Nov-2017::14:04:45.553 AITANG-M-33SQ ncs[28960]: - Starting to listen for Internal IPC on 127.0.0.1:4569
+<INFO> 10-Nov-2017::14:04:45.845 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: /Users/aitang/nso-4.5/var/ncs/cdb/aaa_init.xml
+<INFO> 10-Nov-2017::14:04:45.899 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: /Users/aitang/nso-4.5/var/ncs/cdb/ncs_defaults.xml
+<INFO> 10-Nov-2017::14:04:45.910 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: /Users/aitang/nso-4.5/var/ncs/cdb/sls_defaults.xml
+<INFO> 10-Nov-2017::14:04:45.911 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: /Users/aitang/nso-4.5/var/ncs/cdb/tailf-ncs-alarms_init.xml
+<INFO> 10-Nov-2017::14:04:45.916 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: /Users/aitang/nso-4.5/var/ncs/cdb/tailf-webui-one_init.xml
+<INFO> 10-Nov-2017::14:04:45.919 AITANG-M-33SQ ncs[28960]: - CDB load: processing file: ./ncs-cdb/ncs_init.xml
+<INFO> 10-Nov-2017::14:04:46.201 AITANG-M-33SQ ncs[28960]: - Starting the NCS Java VM
+<DEBUG> 10-Nov-2017::14:04:46.386 AITANG-M-33SQ ncs[28960]: - Loading file /Users/aitang/nso-4.5/etc/ncs/snmp/snmp_init.xml
+<INFO> 10-Nov-2017::14:04:46.619 AITANG-M-33SQ ncs[28960]: - Starting to listen for NETCONF SSH on 0.0.0.0:2022
+<INFO> 10-Nov-2017::14:04:46.712 AITANG-M-33SQ ncs[28960]: - Starting to listen for WebUI TCP on 0.0.0.0:8080
+<DEBUG> 10-Nov-2017::14:04:46.796 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMPv2-MIB
+<DEBUG> 10-Nov-2017::14:04:46.796 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-FRAMEWORK-MIB
+<DEBUG> 10-Nov-2017::14:04:46.797 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-MPD-MIB
+<INFO> 10-Nov-2017::14:04:46.899 AITANG-M-33SQ ncs[28960]: - Starting to listen for SNMP UDP on 0.0.0.0:4000
+<DEBUG> 10-Nov-2017::14:04:46.918 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/etc/ncs/snmp/IANA-ITU-ALARM-TC-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.923 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/etc/ncs/snmp/ITU-ALARM-TC-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.929 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-ALARM-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.930 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-ALARM-TC-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.931 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/etc/ncs/snmp/TAILF-TOP-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.932 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-COMMUNITY-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.933 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-TARGET-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.934 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-NOTIFICATION-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.935 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-USER-BASED-SM-MIB.bin
+<DEBUG> 10-Nov-2017::14:04:46.936 AITANG-M-33SQ ncs[28960]: - Loading MIB: /Users/aitang/nso-4.5/lib/ncs/lib/snmp/snmp/priv/mibs/SNMP-VIEW-BASED-ACM-MIB.bin
+<INFO> 10-Nov-2017::14:04:46.965 AITANG-M-33SQ ncs[28960]: - Starting to listen for CLI SSH on 0.0.0.0:2024
+<INFO> 10-Nov-2017::14:04:47.404 AITANG-M-33SQ ncs[28960]: - NCS started vsn: 4.5
+<INFO> 10-Nov-2017::14:04:47.449 AITANG-M-33SQ ncs[28960]: - Starting the NCS Smart Licensing Java VM
+<INFO> 10-Nov-2017::14:04:52.682 AITANG-M-33SQ ncs[28960]: - Smart Licensing Global Notification: type = "notifyEnabled", agentID = "sa1", enforceMode = "notApplicable", allowRestricted = false, failReasonCode = "success", failMessage = "Successful."
+<INFO> 10-Nov-2017::14:04:57.521 AITANG-M-33SQ ncs[28960]: - Smart Licensing Global Notification: type = "notifyReady", agentID = "sa1", enforceMode = "notApplicable", allowRestricted = false, failReasonCode = "success", failMessage = "Successful."
+<INFO> 10-Nov-2017::14:04:57.545 AITANG-M-33SQ ncs[28960]: - Smart Licensing Entitlement Notification: type = "notifyEnforcementMode", agentID = "sa1", notificationTime = "Nov 10 14:04:52 2017", version = "1.0", requestedDate = "Nov 10 14:04:52 2017", tag = "regid.2015-10.com.cisco.NSO-platform-production,1.0_d1445dab-9d96-4593-99f2-6f633b8a759c", enforceMode = "eval", daysLeft = 90, expiryDate = "Feb 8 14:04:52 2018", requestedCount = 1
+<INFO> 10-Nov-2017::14:04:57.545 AITANG-M-33SQ ncs[28960]: - Smart Licensing Entitlement Notification: type = "notifyEnforcementMode", agentID = "sa1", notificationTime = "Nov 10 14:04:52 2017", version = "1.0", requestedDate = "Nov 10 14:04:52 2017", tag = "regid.2015-10.com.cisco.NSO-network-element,1.0_5d641fa0-757d-43b0-a926-166cb6e3cfdd", enforceMode = "eval", daysLeft = 90, expiryDate = "Feb 8 14:04:52 2018", requestedCount = 3
+<INFO> 10-Nov-2017::15:04:47.393 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 23h 0m 59s
+<INFO> 10-Nov-2017::16:04:47.310 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 22h 0m 59s
+<INFO> 12-Nov-2017::05:48:28.827 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 21h 0m 59s
+<INFO> 12-Nov-2017::15:11:37.106 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 20h 0m 59s
+<INFO> 12-Nov-2017::16:11:02.291 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 19h 1m 59s
+<INFO> 12-Nov-2017::17:10:27.474 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 18h 1m 59s
+<INFO> 12-Nov-2017::18:09:52.656 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 17h 2m 59s
+<INFO> 12-Nov-2017::19:09:17.837 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 16h 3m 59s
+<INFO> 12-Nov-2017::20:08:43.016 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 15h 3m 59s
+<INFO> 12-Nov-2017::21:08:08.204 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 14h 4m 59s
+<INFO> 12-Nov-2017::22:07:33.382 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 13h 4m 59s
+<INFO> 12-Nov-2017::23:06:58.570 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 12h 5m 59s
+<INFO> 13-Nov-2017::00:06:23.752 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 11h 6m 59s
+<INFO> 13-Nov-2017::01:05:48.933 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 10h 6m 59s
+<INFO> 13-Nov-2017::06:29:59.371 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 9h 7m 59s
+<INFO> 13-Nov-2017::07:29:24.560 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 8h 7m 59s
+<INFO> 13-Nov-2017::08:28:49.744 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 7h 8m 59s
+<INFO> 13-Nov-2017::09:28:14.924 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 6h 8m 59s
+<INFO> 13-Nov-2017::10:27:40.108 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 5h 9m 59s
+<INFO> 13-Nov-2017::11:27:05.292 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 4h 10m 59s
+<INFO> 13-Nov-2017::12:26:30.478 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 3h 10m 59s
+<INFO> 13-Nov-2017::13:25:55.661 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 2h 11m 59s
+<INFO> 13-Nov-2017::14:25:20.845 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 1h 11m 59s
+<INFO> 13-Nov-2017::15:24:46.031 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 89d 0h 12m 59s
+<INFO> 13-Nov-2017::16:24:11.212 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 23h 12m 59s
+<INFO> 13-Nov-2017::17:51:37.822 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 22h 13m 59s
+<INFO> 13-Nov-2017::18:51:03.007 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 21h 14m 59s
+<INFO> 13-Nov-2017::21:26:00.599 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 20h 14m 59s
+<INFO> 13-Nov-2017::22:25:25.787 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 19h 15m 59s
+<INFO> 13-Nov-2017::23:24:50.972 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 18h 15m 59s
+<INFO> 14-Nov-2017::00:24:16.161 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 17h 16m 59s
+<INFO> 14-Nov-2017::01:23:41.352 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 16h 17m 59s
+<INFO> 14-Nov-2017::02:23:06.539 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 15h 17m 59s
+<INFO> 14-Nov-2017::03:22:31.728 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 14h 18m 59s
+<INFO> 14-Nov-2017::04:21:56.915 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 13h 18m 59s
+<INFO> 14-Nov-2017::05:21:22.101 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 12h 19m 59s
+<INFO> 14-Nov-2017::06:20:47.289 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 11h 19m 59s
+<INFO> 14-Nov-2017::07:20:12.478 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 10h 20m 59s
+<INFO> 14-Nov-2017::08:19:37.665 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 9h 21m 59s
+<INFO> 14-Nov-2017::09:19:02.851 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 8h 21m 59s
+<INFO> 14-Nov-2017::10:18:28.042 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 7h 22m 59s
+<INFO> 14-Nov-2017::11:17:53.221 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 6h 22m 59s
+<INFO> 14-Nov-2017::12:17:18.409 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 5h 23m 59s
+<INFO> 14-Nov-2017::13:16:43.591 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 4h 23m 59s
+<INFO> 14-Nov-2017::14:16:08.775 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 3h 24m 59s
+<INFO> 14-Nov-2017::15:15:33.963 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 2h 25m 59s
+<INFO> 14-Nov-2017::16:14:59.148 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 1h 25m 59s
+<INFO> 14-Nov-2017::17:14:24.337 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 88d 0h 26m 59s
+<INFO> 14-Nov-2017::18:47:41.519 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 23h 26m 59s
+<INFO> 14-Nov-2017::21:45:55.305 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 22h 27m 59s
+<INFO> 14-Nov-2017::22:59:06.610 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 21h 28m 59s
+<INFO> 14-Nov-2017::23:58:31.793 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 20h 28m 59s
+<INFO> 15-Nov-2017::00:57:56.990 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 19h 29m 59s
+<INFO> 15-Nov-2017::01:57:22.171 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 18h 29m 59s
+<INFO> 15-Nov-2017::02:56:47.356 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 17h 30m 59s
+<INFO> 15-Nov-2017::03:56:12.549 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 16h 30m 59s
+<INFO> 15-Nov-2017::04:55:37.732 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 15h 31m 59s
+<INFO> 15-Nov-2017::05:55:02.922 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 14h 32m 59s
+<INFO> 15-Nov-2017::06:54:28.105 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 13h 32m 59s
+<INFO> 15-Nov-2017::07:53:53.289 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 12h 33m 59s
+<INFO> 15-Nov-2017::08:53:18.472 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 11h 33m 59s
+<INFO> 15-Nov-2017::09:52:43.660 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 10h 34m 59s
+<INFO> 15-Nov-2017::10:52:08.841 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 9h 34m 59s
+<INFO> 15-Nov-2017::11:51:34.025 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 8h 35m 59s
+<INFO> 15-Nov-2017::12:50:59.213 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 7h 36m 59s
+<INFO> 15-Nov-2017::13:50:24.396 AITANG-M-33SQ ncs[28960]: - Smart Licensing evaluation time remaining: 87d 6h 36m 59s

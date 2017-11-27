@@ -1,0 +1,277 @@
+1. Introduction
+---------------
+
+   This document describes the NED for Cisco ASA devices.
+
+   The NED connects to the device CLI using either SSH or Telnet.
+   Configuration is done by sending native CLI commands to the
+   device through the communication channel.
+
+   WARNING:
+
+   In order for the NED to work pager must be disabled and the terminal
+   width must be configured directly on the device (using TELNET/SSH
+   login) to maximum width:
+   asav-1(config)# pager lines 0
+   asav-1(config)# terminal width 511
+   asav-1(config)# write memory
+
+
+2. Getting started
+------------------
+
+   Set up the environment in $DIR, change DIR to something suitable
+
+     > tar xvzf ned-cisco-asa.tgz
+     > mv ned-cisco-asa $NCS_DIR/packages/neds/
+
+     > export DIR=/tmp/ncs-cisco-asa
+     > ncs-setup --ned-package $NCS_DIR/packages/neds/cisco-asa --dest $DIR
+     > cd $DIR
+
+   Start ncs:
+     > ncs
+
+   Start NCS CLI:
+     > ncs_cli -C -u admin
+
+
+3. Configure device in NCS
+--------------------------
+
+   In the NCS CLI configure the device. Enter configuration mode:
+     # configure
+
+   Set the required configurables, address, remote user data including
+   remote secondary password, if needed:
+     # devices device asav address <device address>
+     # devices device asav device-type cli ned-id cisco-asa
+     # devices device asav state admin-state unlocked
+
+   Set port and protocol:
+     # devices device asav port <typically 22 or 23>
+     # devices device asav device-type cli protocol <telnet or ssh>
+
+   Set authgroup:
+     # devices authgroups group auth-groupname umap admin remote-name <login username>
+     # devices authgroups group auth-groupname umap admin remote-password <login password>
+     # devices device asav authgroup auth-groupname
+     # commit
+
+   Optional debug and trace configurables:
+
+     Make the NED dump allCLI messages sent to/from the XR device
+     # devices global-settings trace raw
+     # commit
+
+     Make the NED print debug log messages
+     # java-vm java-logging logger com.tailf.packages.ned.asa level level-debug
+     # commit
+
+   Exit configure mode:
+     # exit
+
+   Try to connect to the device:
+     # devices device asav connect
+
+   Read the configuration from the device:
+     # devices device asav sync-from
+
+   Look at the configuration:
+     # show running-config devices device asav
+
+
+4. Sample Device Configuration
+------------------------------
+
+   For instance, create a second Loopback interface that is down:
+
+   admin@ncs(config)# devices device asav config
+   admin@ncs(config-config)# hostname mynewhostname
+
+   See what you are about to commit:
+
+   admin@ncs(config-config)# commit dry-run outformat native
+   device asav-1
+     hostname mynewhostname
+
+   Commit new configuration in a transaction:
+
+   admin@ncs(config-config)# commit
+   Commit complete.
+
+   Verify that NCS is in-sync with the device:
+
+    admin@ncs(config-config)# devices device asav check-sync
+    result in-sync
+
+   Compare configuration between device and NCS:
+
+    admin@ncs(config-config)# devices device asav compare-config
+    admin@ncs(config-config)#
+
+   Note: If no diff is shown, supported config is the same in
+         NCS as on the device.
+
+
+5. Configure the NED - ned-settings
+-----------------------------------
+
+  The cisco-asa NED behaviour can be configured using the
+  cisco-asa-XXX ned-settings config, located in three different
+  locations; global, profile and device specific:
+
+  /ncs:devices/global-settings/ned-settings/
+  /ncs:devices/ncs:profiles/profile:<profile name>/ned-settings/
+  /ncs:/device/devices/device:<dev name>/ned-settings/
+
+  Note: profiles setting overrides global-settings and device settings
+  override profile settings, hence the narrowest scope of the setting
+  is used.
+
+  Note: if you change a ned-setting you must reconnect to the device,
+  i.e. disconnect and connect in order for the new setting to take effect.
+
+  See following sections for information about various ned-settings.
+
+
+6. Execute native device command
+--------------------------------
+
+   The NED has support for all native ASA exec commands using the
+   devices device live-status exec any command
+
+   To execute a command, run it in NCS exec mode like this:
+
+    admin@ncs# devices device asav live-status exec any "show
+       running-config hostname"
+    result
+    hostname myhostname
+    myhostname#
+
+   If the command prompts the user for input you can append the
+   answer(s) using '| prompts <answer 1> <answer N>'
+   For example:
+
+   devices device asav live-status exec any "reload | prompts yes yes"
+
+   An alternative way to pass answer to prompts is using
+   ned-settings cisco-asa-auto-prompts, which is a way to register
+   standard answers to standard questions. Note: auto-prompts are
+   checked after '| prompts'. Example settings:
+
+   devices global-settings ned-settings cisco-asa-auto-prompts Q1 question "System configuration has been modified" answer "no"
+   devices global-settings ned-settings cisco-asa-auto-prompts Q2 question "Do you really want to remove these keys" answer "yes"
+   devices global-settings ned-settings cisco-asa-auto-prompts Q3 question "Press RETURN to continue" answer ENTER
+
+   Note: ENTER means a carriage return + line feed is sent to the device.
+   NOTE: IGNORE means the prompt was not a question and parsing continue.
+   Note: A one letter answer is sent without line feed.
+
+   Finally, use "| noprompts" if all prompts should be ignored,
+   e.g. show command only.
+
+
+7. Standard cisco-asa ned-settings
+----------------------------------
+
+  - cisco-asa-transaction-id-method
+
+    The method to use by the NED for calculating transaction ID. Three
+    methods are supported:
+
+    config-hash
+      Calculate MD5 on a snapshot of the entire running config for
+      calculation. (Default)
+
+    show-checksum
+      Use built in 'show checksum' Cryptochecksum.
+
+    config-hash-cached
+      Same as config-hash except that transaction id method will reuse
+      the last unmodified config from show (sync-from).
+
+
+  - cisco-asa-write-memory-setting
+
+    This setting is used to configure how and when an applied config
+    is saved to persistent memory on the device. Two methods are
+    supported:
+
+    on-commit
+      Save configuration immediately after the config has been
+      successfully applied on the device. If an error occurs when saving
+      the whole running config will be rolled back (default)
+
+    disabled
+      Disable saving the applied config to persistent memory.
+
+
+  - cisco-asa get-device-config-settings use-startup-config
+
+    This setting is used to change the method for retrieving
+    config. The normal procedure is to check whether the config is
+    saved, and if it is, list the saved file using 'more'. And if it
+    is not saved, the current configuration is shown using show
+    running-config. Setting this method to true however, will change
+    the behaviour of the NED to always show the saved file, regardless
+    of whether the current configuration is newer. This can be useful
+    to avoid a race condition if multiple NCS clients are used.
+
+
+  - cisco-asa extended-parser turbo-mode turbo-mode|disable [default]
+
+    This setting can be use with NSO-4.4.1 or newer to optimize
+    sync-from and compare-config. Set to turbo-mode to enable.
+
+
+  - cisco-asa admin-device name
+
+    Set with single context use to specify an admin device name used
+    to retrieve device secrets using the more command.
+
+
+  - cisco-asa admin-device method
+
+    maapi
+      The admin session is opened as an NSO action, hence can be
+      reused until connection thread timeout.
+    ssh
+      The admin session is opened as direct SSH connection and
+      immediately closed after config is read.
+
+  - cisco-asa auto context-config-url-file-delete false|true (default)
+
+    This ned-setting is used to inject a delete of pre-existing
+    context config-url file when context * / config-url is (re)set.
+    By default it is set to true to avoid problem with pre-existing
+    config if creating and initializing a context in same transaction.
+    Hence if this ned-setting is set to false, a sync-from must be
+    performed after setting the config-url file.
+
+
+8. context configuration
+------------------------
+
+  There are three ned-settings used to configure contexts in the cisco
+  asa NED:
+
+  The cisco-asa-context-list can be used to configure supported
+  contexts for admin restricted admin logins. The context name(s) can
+  be specified using a regexp expression.
+
+  The cisco-asa-context-name ned-setting can be used to specify a
+  the context name for a single context login on a multiple mode
+  device.
+
+  The cisco-asa admin-device ned-settings can be used to specify a
+  secondary SSH connection to the admin login on a single context
+  device (i.e. using the cisco-asa-context-name setting). The reason
+  for the admin connection is to be allowed to read secrets using the
+  more command. WARNING: Running-config must be saved or more command
+  will not be used, i.e make sure to have
+  cisco-asa-write-memory-setting set to on-commit.
+
+
+9. END OF README FILE
+----------------------

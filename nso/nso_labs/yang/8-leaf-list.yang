@@ -1,0 +1,5 @@
+leaf-list domain-search {
+  type string;
+  ordered-by user;
+  description "List of domain names";
+}

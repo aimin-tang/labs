@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>To-do list App</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+
+  <body ng-app="todoApp" ng-controller="todoController">
+    <h1>What needs to be done?</h1>
+
+    <form ng-submit="addTodo()">
+      <div>
+        <input type="text" ng-model="newTask"/>
+        <button type="submit">Add Task</button>
+      </div>
+    </form>
+    <br/>
+
+    <div id="taskList">
+      <div ng-repeat="task in taskList">
+        <label class="description" ng-class="{strike: task.done}">
+          <input type="checkbox" ng-model="task.done"/>
+          {{task.description}}
+        </label>
+        <button ng-click="deleteTodo($index)">Delete</button>
+      </div>
+    </div>
+
+    <span id="todo-count">
+      <h4>{{pendingCount}}
+      <ng-pluralize count="pendingCount" when="{one: 'item left', other: 'items left'}">
+      </ng-pluralize>
+      <button id="clearTasks" ng-click="clearCompleted()">
+        Clear completed {{taskList.length - pendingCount}}
+      </button>
+    </span>
+
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="controllers.js"></script>
+  </body>
+</html>

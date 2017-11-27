@@ -1,0 +1,18 @@
+devices:
+  ncs:
+    os: nso
+    type: nso
+    tacacs:
+      username: admin
+    passwords:
+      tacacs: admin
+    connections:
+      defaults:
+        class: unicon.Unicon
+        via: cli
+      con:
+        command: ncs_cli -C
+      cli:
+        protocol: ssh
+        ip: 127.0.0.1
+        port: 2024

@@ -1,0 +1,29 @@
+<config xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <device>
+    <name>lab-asa</name>
+    <address>10.83.67.34</address>
+    <port>2422</port>
+    <authgroup>lab-asa-auth</authgroup>
+    <device-type>
+      <cli>
+        <ned-id xmlns:asa-id="http://cisco.com/ned/asa-id">asa-id:cisco-asa</ned-id>
+      </cli>
+    </device-type>
+    <state>
+      <admin-state>unlocked</admin-state>
+    </state>
+  </device>
+
+  <authgroups>
+  <group>
+    <name>lab-asa-auth</name>
+    <umap>
+      <local-user>admin</local-user>
+      <remote-name>cisco</remote-name>
+      <remote-password>cisco</remote-password>
+    </umap>
+  </group>
+  </authgroups>
+   </devices>
+</config>

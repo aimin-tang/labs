@@ -1,0 +1,16 @@
+# Created by: admin
+# Date: 2017-11-10 14:32:19
+# Via: netconf
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10000
+
+sys {
+    routes {
+        inet {
+            delete:
+            route 10.2.0.0 24;
+        }
+     }
+ }

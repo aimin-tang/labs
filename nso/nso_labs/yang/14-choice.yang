@@ -1,0 +1,23 @@
+choice transfer-method {
+  leaf transfer-interval {
+    description "Frequency";
+    type uint16 {
+      range "15 .. 2880";
+    }
+    units minutes;
+  }
+  leaf transfer-on-commit {
+    description "Transfer after each commit";
+    type empty;
+  }
+}
+
+choice counters {
+  case four-counters {
+    leaf threshold {}
+    leaf reset-timer {}
+  }
+  container warning-only {
+  }
+  default four-counters;
+}

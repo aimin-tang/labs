@@ -1,0 +1,31 @@
+list user {
+  key name;
+  leaf name {
+    type string;
+  }
+  leaf uid {
+    type uint32;
+  }
+  unique full-name;
+  leaf full-name {
+    type string;
+  }
+  leaf class {
+    type string;
+    default viewer;
+  }
+}
+
+attributes:
+max-elements
+min-elements
+ordered-by
+
+key path:
+/user{hawk}/name = hawk
+
+list route {
+  key "ip prefix";
+  ...
+}
+/route{16.40.0.0 16}/next-hop = 220.40.0.1

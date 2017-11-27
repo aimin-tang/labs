@@ -1,0 +1,26 @@
+grouping target {
+  leaf address {
+    type inet:ip-address;
+    description "Target IP";
+  }
+  leaf port {
+    type inet:port-number;
+    description "Target port number";
+  }
+}
+
+container peer {
+  container destination {
+    uses target;
+  }
+}
+
+container servers {
+  container http {
+    uses target {
+      refine port {
+        default 80;
+      }
+    }
+  }
+}

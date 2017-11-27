@@ -1,0 +1,5 @@
+# Meta information for the building process
+PACKAGES = cisco-ios cisco-asa
+GIT_PACKAGES =
+NCSVSNSTRICT: 3.4.5,4.0.5,4.1.1,4.2,4.3.0.2
+NCSVSN: 3.4.5,4.0.5,4.1.1,4.2,4.3.0.2

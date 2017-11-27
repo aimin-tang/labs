@@ -1,0 +1,22 @@
+rpc activate-software-image {
+  input {
+    leaf image {
+      type binary;
+    }
+  }
+  output {
+    leaf status {
+      type string;
+    }
+  }
+}
+
+notification config-change {
+  descript "config has changed";
+  leaf operator-name {
+    type string;
+  }
+  leaf-list change {
+    type instance-identifier;
+  }
+}

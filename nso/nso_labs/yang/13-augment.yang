@@ -1,0 +1,12 @@
+augment /sys:system/sys:user {
+  leaf expire {
+    type yang:date-and-time;
+  }
+}
+
+augment /sys:system/sys:user {
+  when "sys:class = 'wheel'";
+  leaf shell {
+    type string;
+  }
+}

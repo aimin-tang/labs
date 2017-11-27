@@ -1,0 +1,56 @@
+# Created by: admin
+# Date: 2017-11-10 14:24:02
+# Via: cli
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10004
+
+ncs:devices {
+    ncs:device ex1 {
+        ncs:config {
+            r:sys {
+                r:routes {
+                    r:inet {
+                        delete:
+                        r:route 10.10.0.0 16;
+                        delete:
+                        r:route 10.20.0.0 16;
+                        delete:
+                        r:route 10.30.0.0 16;
+                        delete:
+                        r:route 10.40.0.0 16;
+                        delete:
+                        r:route 10.50.0.0 16;
+                        delete:
+                        r:route 10.60.0.0 16;
+                        delete:
+                        r:route 10.70.0.0 16;
+                    }
+                }
+                r:interfaces {
+                    delete:
+                    r:interface eth0;
+                    delete:
+                    ex:serial ppp0;
+                }
+                r:dns {
+                    delete:
+                    r:server 10.2.3.4;
+                }
+                r:syslog {
+                    delete:
+                    r:server 10.3.4.5;
+                }
+                r:ntp {
+                    delete:
+                    r:server 10.2.3.4;
+                    delete:
+                    r:key 2;
+                    delete:
+                    r:controlkey 2;
+                }
+             }
+         }
+     }
+ }

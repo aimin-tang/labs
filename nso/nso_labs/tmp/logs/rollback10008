@@ -1,0 +1,20 @@
+# Created by: admin
+# Date: 2017-11-10 14:35:28
+# Via: cli
+# Type: delta
+# Label: 
+# Comment: 
+# No: 10008
+
+ncs:devices {
+    ncs:device ex0 {
+        ncs:config {
+            r:sys {
+                r:ntp {
+                    delete:
+                    r:key 3;
+                }
+             }
+         }
+     }
+ }
