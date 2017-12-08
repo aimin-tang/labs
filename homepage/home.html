@@ -9,55 +9,53 @@
 
 <body ng-controller="BookListController">
 
-  <p>
-    <input type="text" placeholder="Search..." ng-model="searchFor" size="20"/>
-  </p>
+<p>
+  <input type="text" placeholder="Search..." ng-model="searchFor" size="20"/>
+</p>
 
-  <div class="book panel panel-primary" ng-repeat="book in booksRead | filter: { title: searchFor } ">
-    <div class="panel-heading"> {{ book.title }} <div class="title" >{{ book.date }}</div> </div>
-    <div class="panel-body">
-      {{ book.description }}
+<div class="book panel panel-primary" ng-repeat="book in booksRead | filter: { title: searchFor } ">
+  <div class="panel-heading"> {{ book.title }} <div class="title" >{{ book.date }}</div> </div>
+  <div class="panel-body">
+    {{ book.description }}
+  </div>
+</div>
+
+<div style="clear: left"></div>
+
+<h3> Add new book</h3>
+<div class="book panel panel-default">
+  <div class="panel-heading">
+    <input type="text" placeholder="Title..." size="20" ng-model="new_book.title"/>
+    <div class="title" >
+      <input type="text" placeholder="yyyy/mm/dd" size="10" ng-model="new_book.date"/>
     </div>
   </div>
-
-  <div style="clear: left"></div>
-
-  <h3> Add new book</h3>
-  <div class="book panel panel-default">
-    <div class="panel-heading">
-      <input type="text" placeholder="Title..." size="20" ng-model="new_book.title"/>
-      <div class="title" >
-        <input type="text" placeholder="yyyy/mm/dd" size="10" ng-model="new_book.date"/>
-      </div>
-    </div>
-    <div class="panel-body">
-      <p>
-        <textarea ng-model="new_book.description" placeholder="Description..." rows='4' style="width: 100%"></textarea>
-      </p>
-      <button ng-click="addBook(new_book)" type="button" class="btn btn-success">Add New Book</button>
-    </div>
+  <div class="panel-body">
+    <p>
+      <textarea ng-model="new_book.description" placeholder="Description..." rows='4' style="width: 100%"></textarea>
+    </p>
+    <button ng-click="addBook(new_book)" type="button" class="btn btn-success">Add New Book</button>
   </div>
+</div>
 
 
 
 <script type="text/javascript">
 
-function BookListController ($scope) {
+    function BookListController ($scope) {
 
-    $scope.new_book = {};
+        $scope.booksRead = [
+            { title: 'Core Java', date: '2017-09-05' },
+            { title: 'Javascript In 24 Hours', date: '2017-11-13', description: 'javascript and DOM'},
+            { title: 'Eloquent Javascript', date: '2017-11-01', description: 'functional programming'},
+            { title: 'Working With Algorithms In Python', date: '2017-11-20', description: 'brute force\\nshortest path first'}
+        ];
 
-    $scope.booksRead = [
-        { title: 'Core Java', date: '2017-09-05' },
-        { title: 'Javascript In 24 Hours', date: '2017-11-13', description: 'javascript and DOM'},
-        { title: 'Eloquent Javascript', date: '2017-11-01', description: 'functional programming'},
-        { title: 'Working With Algorithms In Python', date: '2017-11-20', description: 'brute force\\nshortest path first'}
-    ];
-
-    $scope.addBook = function (book_data) {
-        $scope.booksRead.push(book_data);
-        $scope.new_book = {};
-    };
-}
+        $scope.addBook = function (book_data) {
+            $scope.booksRead.push(book_data);
+            $scope.new_book = {};
+        };
+    }
 
 </script>
 
