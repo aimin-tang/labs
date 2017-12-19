@@ -10,7 +10,15 @@ while (!done) {
     }
 
     if (task === "list") {
-        console.log(task_list);
+        task_list.forEach(function(task, i) {
+            console.log(i + ": " + task);
+        })
+    }
+
+    if (task === "delete") {
+        index = prompt("Enter index to delete:");
+        task_list = task_list.splice(index, 1);
+        console.log("Item " + index + " deleted.");
     }
 
     if (task === "quit") {
