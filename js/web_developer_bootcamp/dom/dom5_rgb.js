@@ -5,22 +5,36 @@ var pickedColor = pickColor();
 var colorDisplay = document.getElementById('colorDisplay');
 var messageDisplay = document.querySelector('#message');
 var h1 = document.querySelector('h1');
+var resetButton = document.querySelector('#reset');
 
-colorDisplay.textContent = pickedColor;
+function updateTiles() {
+    colorDisplay.textContent = pickedColor;
+    resetH1Color();
 
-for (var i=0; i<squares.length; i++) {
-    squares[i].style.backgroundColor = colors[i];
-    squares[i].addEventListener("click", function () {
-        var clickedColor = this.style.backgroundColor;
-        if (clickedColor === pickedColor) {
-            messageDisplay.textContent = 'Correct!';
-            changeColors(clickedColor);
-            h1.style.backgroundColor = clickedColor;
-        } else {
-            this.style.backgroundColor = '#232323';
-            messageDisplay.textContent = 'Try Again!';
-        }
-    })
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+    }
+}
+
+function updateTilesEvents() {
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].addEventListener("click", function () {
+            var clickedColor = this.style.backgroundColor;
+            if (clickedColor === pickedColor) {
+                messageDisplay.textContent = 'Correct!';
+                changeColors(clickedColor);
+                h1.style.backgroundColor = pickedColor;
+                resetButton.textContent = 'Play again?';
+            } else {
+                this.style.backgroundColor= '#232323';
+                messageDisplay.textContent = 'Try Again!';
+            }
+        })
+    }
+}
+
+function resetH1Color() {
+    h1.style.backgroundColor = '#232323';
 }
 
 function changeColors(color) {
@@ -52,3 +66,13 @@ function generateRandomColors(num) {
     }
     return colors;
 }
+
+resetButton.addEventListener("click", function () {
+    colors = generateRandomColors(6);
+    pickedColor = pickColor();
+    updateTiles();
+    this.textContent = 'New colors';
+})
+
+updateTiles();
+updateTilesEvents();
