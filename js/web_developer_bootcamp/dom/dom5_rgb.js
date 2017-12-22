@@ -6,6 +6,8 @@ var colorDisplay = document.getElementById('colorDisplay');
 var messageDisplay = document.querySelector('#message');
 var h1 = document.querySelector('h1');
 var resetButton = document.querySelector('#reset');
+var easyButton = document.querySelector('#easyBtn');
+var hardButton = document.querySelector('#hardBtn');
 
 function updateTiles() {
     colorDisplay.textContent = pickedColor;
@@ -72,6 +74,16 @@ resetButton.addEventListener("click", function () {
     pickedColor = pickColor();
     updateTiles();
     this.textContent = 'New colors';
+})
+
+easyButton.addEventListener("click", function () {
+    easyButton.classList.toggle("selected");
+    hardButton.classList.toggle("selected");
+})
+
+hardButton.addEventListener("click", function () {
+    easyButton.classList.toggle("selected");
+    hardButton.classList.toggle("selected");
 })
 
 updateTiles();
