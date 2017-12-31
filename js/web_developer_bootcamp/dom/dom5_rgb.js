@@ -1,90 +1,116 @@
-var colors = generateRandomColors(6);
-
 var squares = document.querySelectorAll('.square');
-var pickedColor = pickColor();
-var colorDisplay = document.getElementById('colorDisplay');
-var messageDisplay = document.querySelector('#message');
-var h1 = document.querySelector('h1');
-var resetButton = document.querySelector('#reset');
-var easyButton = document.querySelector('#easyBtn');
-var hardButton = document.querySelector('#hardBtn');
+var headerColor = document.querySelector('#headerColor');
+var verdict = document.querySelector("#verdict");
+var h1 = document.querySelector("h1");
+var resetBtn= document.querySelector("#resetBtn");
+var easyBtn= document.querySelector("#easyBtn");
+var hardBtn= document.querySelector("#hardBtn");
+var colors;
+var squaresInUse = 6;
+var pickedColor = undefined;
 
-function updateTiles() {
-    colorDisplay.textContent = pickedColor;
-    resetH1Color();
+function generateRandomColors(numSquares) {
+    colors = [];
+    for (var i = 0; i < numSquares; i++) {
+        color = "rgb(";
+        color += generateRandomNumber(256);
+        color += ", ";
+        color += generateRandomNumber(256);
+        color += ", ";
+        color += generateRandomNumber(256);
+        color += ")";
+        colors.push(color);
+    }
+}
 
-    for (var i = 0; i < squares.length; i++) {
+function generateRandomNumber(upperLimit) {
+    return Math.floor(Math.random() * upperLimit);
+}
+
+function newSquareColors() {
+    for (var i = 0; i < squaresInUse; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
 }
 
-function updateTilesEvents() {
-    for (var i = 0; i < squares.length; i++) {
+function pickAColor() {
+    num = generateRandomNumber(squaresInUse);
+    pickedColor = colors[num];
+    console.log(pickedColor);
+}
+
+function updateH1Color() {
+    headerColor.textContent = pickedColor;
+}
+
+function squaresInPickedColor(color) {
+    for (var i = 0; i < squaresInUse; i++) {
+        squares[i].style.backgroundColor = color;
+    }
+}
+
+function h1InPickedColor(color) {
+    h1.style.backgroundColor = color;
+}
+
+function updateSquareEvHandlers() {
+    for (var i = 0; i < squaresInUse; i++) {
         squares[i].addEventListener("click", function () {
-            var clickedColor = this.style.backgroundColor;
-            if (clickedColor === pickedColor) {
-                messageDisplay.textContent = 'Correct!';
-                changeColors(clickedColor);
-                h1.style.backgroundColor = pickedColor;
-                resetButton.textContent = 'Play again?';
+            if (this.style.backgroundColor === pickedColor) {
+                verdict.textContent = "correct!";
+                squaresInPickedColor(pickedColor);
+                h1InPickedColor(pickedColor);
+                resetBtn.textContent = "Play again";
             } else {
-                this.style.backgroundColor= '#232323';
-                messageDisplay.textContent = 'Try Again!';
+                this.style.backgroundColor = "#232323";
+                verdict.textContent = "wrong!";
             }
         })
     }
 }
 
-function resetH1Color() {
-    h1.style.backgroundColor = '#232323';
-}
-
-function changeColors(color) {
-    for (var i=0; i<squares.length;i++) {
-        squares[i].style.backgroundColor = color;
+function eraseSecondRow() {
+    for (var i = 3; i < 6; i++) {
+        // squares[i].style.backgroundColor = "#232323";
+        squares[i].style.display = "none";
     }
 }
 
-function randomNum(upperLimit) {
-    return Math.floor(Math.random() * upperLimit);
-}
-
-function pickColor() {
-    var r_num = randomNum(colors.length);
-    return colors[r_num];
-}
-
-function generateRandomColors(num) {
-    var colors = [];
-    for (var i=0; i<num; i++) {
-        str = "rgb(";
-        str += randomNum(256);
-        str += ", ";
-        str += randomNum(256);
-        str += ", ";
-        str += randomNum(256);
-        str += ")";
-        colors.push(str);
+function showSecondRow() {
+    for (var i = 3; i < 6; i++) {
+        // squares[i].style.backgroundColor = "#232323";
+        squares[i].style.display = "block";
     }
-    return colors;
 }
 
-resetButton.addEventListener("click", function () {
-    colors = generateRandomColors(6);
-    pickedColor = pickColor();
-    updateTiles();
-    this.textContent = 'New colors';
+resetBtn.addEventListener("click", function () {
+    createNewPage();
 })
 
-easyButton.addEventListener("click", function () {
-    easyButton.classList.toggle("selected");
-    hardButton.classList.toggle("selected");
+easyBtn.addEventListener("click", function () {
+    easyBtn.classList.add('selected');
+    hardBtn.classList.remove('selected');
+    squaresInUse = 3;
+    createNewPage();
+    eraseSecondRow();
 })
 
-hardButton.addEventListener("click", function () {
-    easyButton.classList.toggle("selected");
-    hardButton.classList.toggle("selected");
+hardBtn.addEventListener("click", function () {
+    hardBtn.classList.add('selected');
+    easyBtn.classList.remove('selected');
+    squaresInUse = 6;
+    createNewPage();
+    showSecondRow();
 })
 
-updateTiles();
-updateTilesEvents();
+function createNewPage() {
+    generateRandomColors(6);
+    newSquareColors();
+    pickAColor();
+    updateH1Color();
+    updateSquareEvHandlers();
+    resetBtn.textContent = "New colors";
+    verdict.textContent = "";
+}
+
+createNewPage();
