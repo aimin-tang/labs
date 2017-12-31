@@ -85,6 +85,7 @@ function showSecondRow() {
 
 resetBtn.addEventListener("click", function () {
     createNewPage();
+    h1.style.backgroundColor = "steelblue";
 })
 
 easyBtn.addEventListener("click", function () {
@@ -93,6 +94,7 @@ easyBtn.addEventListener("click", function () {
     squaresInUse = 3;
     createNewPage();
     eraseSecondRow();
+    h1.style.backgroundColor = "steelblue";
 })
 
 hardBtn.addEventListener("click", function () {
@@ -101,6 +103,7 @@ hardBtn.addEventListener("click", function () {
     squaresInUse = 6;
     createNewPage();
     showSecondRow();
+    h1.style.backgroundColor = "steelblue";
 })
 
 function createNewPage() {
