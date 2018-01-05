@@ -1,11 +1,9 @@
-$("h1").css("color", "purple");
-
 // check off to do item by clicking
-$("li").click(function () {
+$("ul").on("click", "li", function () {
     $(this).toggleClass('completed');
 });
 
-$("span").click(function(event) {
+$("ul").on("click", "span", function(event) {
     $(this).parent().fadeOut(500, function() {
         $(this).remove();
     });
@@ -16,6 +14,10 @@ $("input[type='text']").keypress(function (event) {
   if (event.which === 13) {
       var newToDoItem = $(this).val();
       $(this).val("");
-      $("ul").append("<li><span>X</span> " + newToDoItem + "</li>");
+      $("ul").append("<li><i class='fa fa-trash'></i> " + newToDoItem + "</li>");
   }
 });
+
+$(".fa-plus").click(function() {
+    $("input[type='text']").fadeToggle();
+})
