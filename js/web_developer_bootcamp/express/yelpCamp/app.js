@@ -5,7 +5,7 @@ var bodyParser = require("body-parser");
 var campgrounds = [
     {
         name: "Salmon Creed",
-        image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Takhlakh_Lake_Campground_Sign.JPG"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypXGnfW0LfPFMg35_4xLK3AFsoSIKjpNPX3Jr9LEixoiAdLIvTQ"
     },
     {
         name: "Granite Hill",
@@ -13,7 +13,7 @@ var campgrounds = [
     },
     {
         name: "Mountain Goat's Rest",
-        image: "https://www.nps.gov/lavo/planyourvisit/images/Juniper-Lake-campsite.gif"
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypXGnfW0LfPFMg35_4xLK3AFsoSIKjpNPX3Jr9LEixoiAdLIvTQ"
     }
 ];
 
