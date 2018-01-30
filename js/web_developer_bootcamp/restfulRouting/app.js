@@ -1,6 +1,8 @@
 var bodyParser = require("body-parser");
+var methodOverfide = require("method-override");
 var mongoose = require("mongoose");
 var express = require("express");
+var expressSanitizer = require("express-sanitizer");
 app = express();
 
 // title
@@ -13,6 +15,8 @@ mongoose.connect("mongodb://localhost/restful_blog_app");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressSanitizer());
+app.use(methodOverfide("_method"));
 
 // Mongoose config
 var blogSchema = new mongoose.Schema({
@@ -55,14 +59,60 @@ app.get("/blogs/new", function (req, res) {
 // create
 app.post("/blogs", function (req, res) {
     // create blog
+    req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.create(req.body.blog, function (err, newBlog) {
         if (err) {
             res.render("new");
         } else {
+            // redirect to index
             res.redirect("/blogs");
         }
     })
-    // redirect to index
+});
+
+// show
+app.get("/blogs/:id", function (req, res) {
+    Blog.findById(req.params.id, function (err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        } else {
+            res.render("show", {blog: foundBlog})
+        }
+    })
+});
+
+// edit
+app.get("/blogs/:id/edit", function (req, res) {
+    Blog.findById(req.params.id, function (err, foundBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        } else {
+            res.render("edit", {blog: foundBlog})
+        }
+    })
+});
+
+// update
+app.put("/blogs/:id", function (req, res) {
+    req.body.blog.body = req.sanitize(req.body.blog.body);
+    Blog.findByIdAndUpdate(req.params.id, req.body.blog, function (err, updatedBlog) {
+        if (err) {
+            res.redirect("/blogs");
+        } else {
+            res.redirect("/blogs/" + req.params.id);
+        }
+    })
+});
+
+// delete
+app.delete("/blogs/:id", function (req, res) {
+    Blog.findByIdAndRemove(req.params.id, function (err) {
+        if (err) {
+            res.redirect("/blogs");
+        } else {
+            res.redirect("/blogs");
+        }
+    })
 });
 
 app.listen(3000, 'localhost', function () {
