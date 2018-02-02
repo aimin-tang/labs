@@ -29,6 +29,7 @@ Cat.create({
     name: "Snow White",
     age: 15,
     temperament: "Bland"
+
 }, function (err, cat) {
     if (err) {
         console.log(err);
