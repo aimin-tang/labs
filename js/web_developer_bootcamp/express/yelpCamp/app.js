@@ -2,6 +2,10 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var Campground = require("./models/campground");
+var seedDB = require("./seeds2");
+
+seedDB();
 
 mongoose.connect("mongodb://localhost/yelp_camp");
 
@@ -19,15 +23,6 @@ var campgrounds = [
         image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRypXGnfW0LfPFMg35_4xLK3AFsoSIKjpNPX3Jr9LEixoiAdLIvTQ"
     }
 ];
-
-// Schema setup
-var campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-
-var Campground = mongoose.model("Campground", campgroundSchema);
 
 /*Campground.create({
     name: "Logside",
@@ -80,7 +75,7 @@ app.post("/campgrounds", function (req, res) {
 });
 
 app.get("/campgrounds/:id", function (req, res) {
-    Campground.findById(req.params.id, function (err, foundCampground) {
+    Campground.findById(req.params.id).populate("comments").exec(function (err, foundCampground) {
         if (err) {
             console.log(err);
         } else {
