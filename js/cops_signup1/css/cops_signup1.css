@@ -1,0 +1,25 @@
+.container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+tbody {
+    font-size: 90%;
+    font-style: normal;
+}
+
+thead {
+    font-weight: bold;
+}
+
+table {
+    border-width: 1px;
+    border-style: solid;
+}
+
+tr, td {
+    padding: 2px;
+    width: 100px;
+    border-width: 1px;
+    border-style: dotted;
+}
