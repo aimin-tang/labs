@@ -9,12 +9,12 @@ var Comment = require("./models/comment");
 var User = require("./models/user");
 var seedDB = require("./seeds2");
 
+// requiring routes
 var commentRoutes = require("./routes/comments");
-var campgroundsRoutes = require("./routes/campgrounds");
+var campgroundRoutes = require("./routes/campgrounds");
 var indexRoutes = require("./routes/index");
 
-
-seedDB();
+// seedDB();  // seed the database
 
 mongoose.connect("mongodb://localhost/yelp_camp");
 
@@ -67,7 +67,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/campgrounds/:id/comments", commentRoutes);
-app.use("/campgrounds", campgroundsRoutes);
+app.use("/campgrounds", campgroundRoutes);
 app.use("/", indexRoutes);
 
 app.listen(3000, 'localhost', function () {

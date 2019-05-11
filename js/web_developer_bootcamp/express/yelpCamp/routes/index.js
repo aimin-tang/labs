@@ -13,7 +13,7 @@ router.get("/register", function (req, res) {
     res.render("register");
 });
 
-// register
+// register sign up
 router.post("/register", function (req, res) {
     var newUser = new User({username: req.body.username});
     User.register(newUser, req.body.password, function  (err, user) {
@@ -32,6 +32,7 @@ router.get("/login", function (req, res) {
     res.render("login");
 });
 
+// login logic
 router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/campgrounds",
